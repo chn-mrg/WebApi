@@ -23,10 +23,6 @@ class ForumUserController extends UserBaseController
 
         $user               = self::getUserInfo();
 
-        if(!$user) {
-            self::returnAjax(100012);
-        }
-
         $user_id            = I('user_id');
         $type               = I('type')? I('type') : 1;
         $page               = I('page')? I('page') : 1;
@@ -78,6 +74,9 @@ class ForumUserController extends UserBaseController
                 }
 
                 //是否显示删除按钮
+                /*if() {
+
+                }*/
                 if($user['user_id'] == $user_id) {
                     $dynamic[$k]['isBtn']                   = 1; //显示
                 }else{
@@ -85,7 +84,7 @@ class ForumUserController extends UserBaseController
                 }
             }
 
-            self::returnAjax(200, array(array('pages'=>array('count'=>$dynamicCount,'num'=>$num),'list'=>array('user'=>$userInfo,'dynamic'=>$dynamic))));
+            self::returnAjax(200, array('pages'=>array('count'=>$dynamicCount,'num'=>$num),'list'=>array('user'=>$userInfo,'dynamic'=>$dynamic)));
         }
 
         //粉丝 我是被关注者
@@ -123,7 +122,7 @@ class ForumUserController extends UserBaseController
                 }
             }
 
-            self::returnAjax(200, array(array('pages'=>array('count'=>$fansCount,'num'=>$num),'list'=>array('user'=>$userInfo,'fans'=>$fans))));
+            self::returnAjax(200, array('pages'=>array('count'=>$fansCount,'num'=>$num),'list'=>array('user'=>$userInfo,'fans'=>$fans)));
         }
 
         //用户的关注
@@ -153,7 +152,7 @@ class ForumUserController extends UserBaseController
                 }
             }
 
-            self::returnAjax(200, array(array('pages'=>array('count'=>$fansCount,'num'=>$num),'list'=>$fans)));
+            self::returnAjax(200, array('pages'=>array('count'=>$fansCount,'num'=>$num),'list'=>$fans));
         }
     }
 

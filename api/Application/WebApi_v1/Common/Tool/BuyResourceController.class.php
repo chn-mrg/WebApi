@@ -15,7 +15,6 @@ class BuyResourceController
      * 购买资源事件
      */
 
-
     protected static $user_id;
     protected static $type; //1-视频，2-图片，3-小说
     protected static $resource_id; //资源id

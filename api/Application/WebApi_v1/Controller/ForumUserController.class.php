@@ -22,7 +22,6 @@ class ForumUserController extends UserBaseController
     public function index() {
 
         $user               = self::getUserInfo();
-
         $user_id            = I('user_id');
         $type               = I('type')? I('type') : 1;
         $page               = I('page')? I('page') : 1;
@@ -36,13 +35,22 @@ class ForumUserController extends UserBaseController
         $userInfo           = $userM->field('user_id,nickname,head_portrait,signature,experience')->where(array('user_id'=>$user_id))->find();
         if($userInfo) {
             //用户头像路径
-            $userInfo['head_portrait']  = self::ResourceUrl($userInfo['head_portrait']);
+            $userInfo['head_portrait']      = self::ResourceUrl($userInfo['head_portrait']);
             //用户等级
             $level                          = self::level($userInfo['experience']);
             if($level) {
                 $userInfo['level']          = $level['level']; //等级名称
                 $userInfo['icon']           = $level['icon']; //等级标志
             }
+            //用户动态
+            $dynamicM                       = M('forum_dynamic');
+            $userInfo['dynamicCount']       = $dynamicM->where(array('user_id'=>$user_id))->count();
+
+            $fansM                          = M('forum_fans');
+            $userInfo['fansCount']          = $fansM->where(array('touser_id'=>$user_id))->count();//用户粉丝
+            $userInfo['focusCount']         = $fansM->where(array('user_id'=>$user_id))->count();//用户粉丝
+            //用户关注
+
         }else{
             self::returnAjax(404);
         }
@@ -72,19 +80,19 @@ class ForumUserController extends UserBaseController
                 if($v['type'] == 2) { //图片
                     $dynamic[$k]['object']['img_url']       = self::ResourceUrl($dynamic[$k]['object']['img_url']);
                 }
-
-                //是否显示删除按钮
-                /*if() {
-
-                }*/
-                if($user['user_id'] == $user_id) {
-                    $dynamic[$k]['isBtn']                   = 1; //显示
+            }
+            //是否显示删除按钮
+            if(!$user) {
+                $isBtn                   = 2; //不显示
+            }else{
+                if($user['user_id'] != $user_id) {
+                    $isBtn               = 1; //显示
                 }else{
-                    $dynamic[$k]['isBtn']                   = 2; //不显示
+                    $isBtn               = 2; //不显示
                 }
             }
 
-            self::returnAjax(200, array('pages'=>array('count'=>$dynamicCount,'num'=>$num),'list'=>array('user'=>$userInfo,'dynamic'=>$dynamic)));
+            self::returnAjax(200, array('pages'=>array('count'=>$dynamicCount,'num'=>$num),'list'=>array('user'=>$userInfo,'dynamic'=>$dynamic,'btn'=>$isBtn)));
         }
 
         //粉丝 我是被关注者

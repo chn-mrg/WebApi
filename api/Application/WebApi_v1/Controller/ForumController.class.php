@@ -24,11 +24,6 @@ class ForumController extends UserBaseController
     public function index() {
 
         $userInfo       = self::getUserInfo();
-
-        if(!$userInfo) {
-            self::returnAjax(100012); //用户未登录
-        }
-
         $sort           = I('sort')? I('sort') : 1;
         $type           = I('type');
         $page           = I('page')? I('page') : 1;
@@ -61,6 +56,10 @@ class ForumController extends UserBaseController
                                 ->select();
             $dynamicCount       = $dynamicM->alias('a')->join('LEFT JOIN sex_user_list b ON b.user_id = a.user_id')->where($where)->count();
         }else{
+            //关注动态需先登录
+            if(!$userInfo) {
+                self::returnAjax(100012);
+            }
             $fansM              = M('forum_fans');
             $num                = 8;
 
@@ -91,7 +90,6 @@ class ForumController extends UserBaseController
                 $dynamic[$k]['icon']        = $level['icon']; //等级标志
             }
             if($type != 4) {
-
                 //判断该动态是否是当前用户所属
                 if($userInfo['user_id'] != $v['user_id']) {
                     //判断当前用户是否是此动态发布者粉丝
@@ -104,14 +102,20 @@ class ForumController extends UserBaseController
                 }else{
                     $dynamic[$k]['isFans']      = 0; //不显示该按钮
                 }
+            }else{
+                $dynamic[$k]['isFans']          = 0; //不显示该按钮
             }
 
             //用户是否已点赞本条动态
-            $isLike                         = self::isLike($userInfo['user_id'], $v['dynamic_id']);
-            if($isLike) {
-                $dynamic[$k]['isLike']      = 1; //已点赞
+            if(!$userInfo) {
+                $dynamic[$k]['isLike']          = 2; //未点赞
             }else{
-                $dynamic[$k]['isLike']      = 2; //未点赞
+                $isLike                         = self::isLike($userInfo['user_id'], $v['dynamic_id']);
+                if($isLike) {
+                    $dynamic[$k]['isLike']      = 1; //已点赞
+                }else{
+                    $dynamic[$k]['isLike']      = 2; //未点赞
+                }
             }
 
             //发布时间转换为几分钟前、几小时前、、、几年前
@@ -227,10 +231,6 @@ class ForumController extends UserBaseController
 
         $userInfo       = self::getUserInfo();
 
-        if(!$userInfo) {
-            self::returnAjax(100012); //用户未登录
-        }
-
         $keywords           = I('keywords');
         $page               = I('page')? I('page') : 1;
         $num                = 6; //每页显示动态数
@@ -269,25 +269,30 @@ class ForumController extends UserBaseController
                 $dynamic[$k]['icon']        = $level['icon']; //等级标志
             }
 
-            //判断该动态是否是当前用户所属
-            if($userInfo['user_id'] != $v['user_id']) {
-                //判断当前用户是否是此动态发布者粉丝
-                $isFans                     = self::userTouser($userInfo['user_id'],$v['user_id']);
-                if($isFans) {
-                    $dynamic[$k]['isFans']  = 1; //已关注
-                }elseif(!$isFans){
-                    $dynamic[$k]['isFans']  = 2; //未关注
-                }
-            }else{
-                $dynamic[$k]['isFans']      = 0; //不显示该按钮
-            }
-
-            //用户是否已点赞本条动态
-            $isLike                         = self::isLike($userInfo['user_id'], $v['dynamic_id']);
-            if($isLike) {
-                $dynamic[$k]['isLike']      = 1; //已点赞
-            }else{
+            if(!$userInfo) {
+                $dynamic[$k]['isFans']      = 0; //用户未登录不显示该按钮
                 $dynamic[$k]['isLike']      = 2; //未点赞
+            }else{
+                //判断该动态是否是当前用户所属
+                if($userInfo['user_id'] != $v['user_id']) {
+                    //判断当前用户是否是此动态发布者粉丝
+                    $isFans                     = self::userTouser($userInfo['user_id'],$v['user_id']);
+                    if($isFans) {
+                        $dynamic[$k]['isFans']  = 1; //已关注
+                    }elseif(!$isFans){
+                        $dynamic[$k]['isFans']  = 2; //未关注
+                    }
+                }else{
+                    $dynamic[$k]['isFans']      = 0; //不显示该按钮
+                }
+
+                //用户是否已点赞本条动态
+                $isLike                         = self::isLike($userInfo['user_id'], $v['dynamic_id']);
+                if($isLike) {
+                    $dynamic[$k]['isLike']      = 1; //已点赞
+                }else{
+                    $dynamic[$k]['isLike']      = 2; //未点赞
+                }
             }
 
             //发布时间转换为几分钟前、几小时前、、、几年前
@@ -317,9 +322,6 @@ class ForumController extends UserBaseController
     public function imageDetail() {
 
         $userInfo               = self::getUserInfo();
-        if(!$userInfo) {
-            self::returnAjax(100012); //用户未登录
-        }
 
         $dynamic_id             = I('dynamic_id'); //动态id
         $dynamicM               = M('forum_dynamic');
@@ -345,18 +347,21 @@ class ForumController extends UserBaseController
 
 
         //判断该动态是否是当前用户所属
-        if($userInfo['user_id'] != $dynamic['user_id']) {
-            //判断当前用户是否是此动态发布者粉丝
-            $isFans                     = self::userTouser($userInfo['user_id'],$dynamic['user_id']);
-            if($isFans) {
-                $dynamic['isFans']  = 1; //已关注
-            }elseif(!$isFans){
-                $dynamic['isFans']  = 2; //未关注
-            }
-        }else{
+        if(!$userInfo){
             $dynamic['isFans']      = 0; //不显示该按钮
+        }else{
+            if($userInfo['user_id'] != $dynamic['user_id']) {
+                //判断当前用户是否是此动态发布者粉丝
+                $isFans                     = self::userTouser($userInfo['user_id'],$dynamic['user_id']);
+                if($isFans) {
+                    $dynamic['isFans']  = 1; //已关注
+                }elseif(!$isFans){
+                    $dynamic['isFans']  = 2; //未关注
+                }
+            }else{
+                $dynamic['isFans']      = 0; //不显示该按钮
+            }
         }
-
 
         self::returnAjax(200,$dynamic);
     }
@@ -368,10 +373,6 @@ class ForumController extends UserBaseController
     public function forumDetail() {
 
         $userInfo       = self::getUserInfo();
-
-        if(!$userInfo) {
-            self::returnAjax(100012); //用户未登录
-        }
         $dynamic_id     = I('dynamic_id');
         if(!$dynamic_id) {
             self::returnAjax(100005);
@@ -398,24 +399,31 @@ class ForumController extends UserBaseController
             $dynamicInfo['icon']            = $level['icon']; //等级标志
         }
         //判断该动态是否是当前用户所属
-        if($userInfo['user_id'] != $dynamicInfo['user_id']) {
-            //判断当前用户是否是此动态发布者粉丝
-            $isFans                     = self::userTouser($userInfo['user_id'],$dynamicInfo['user_id']);
-            if($isFans) {
-                $dynamicInfo['isFans']      = 1; //已关注
-            }elseif(!$isFans){
-                $dynamicInfo['isFans']      = 2; //未关注
-            }
-        }else{
+        if(!$userInfo) {
             $dynamicInfo['isFans']          = 0; //不显示该按钮
-        }
-        //用户是否已点赞本条动态
-        $isLike                             = self::isLike($userInfo['user_id'], $dynamicInfo['dynamic_id']);
-        if($isLike) {
-            $dynamicInfo['isLike']          = 1; //已点赞
-        }else{
             $dynamicInfo['isLike']          = 2; //未点赞
+        }else{
+            if($userInfo['user_id'] != $dynamicInfo['user_id']) {
+                //判断当前用户是否是此动态发布者粉丝
+                $isFans                     = self::userTouser($userInfo['user_id'],$dynamicInfo['user_id']);
+                if($isFans) {
+                    $dynamicInfo['isFans']      = 1; //已关注
+                }elseif(!$isFans){
+                    $dynamicInfo['isFans']      = 2; //未关注
+                }
+            }else{
+                $dynamicInfo['isFans']          = 0; //不显示该按钮
+            }
+
+            //用户是否已点赞本条动态
+            $isLike                             = self::isLike($userInfo['user_id'], $dynamicInfo['dynamic_id']);
+            if($isLike) {
+                $dynamicInfo['isLike']          = 1; //已点赞
+            }else{
+                $dynamicInfo['isLike']          = 2; //未点赞
+            }
         }
+
         //发布时间转换为几分钟前、几小时前、、、几年前
         $dynamicInfo['time']                = self::formatDate($dynamicInfo['time']);
 

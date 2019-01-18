@@ -1,0 +1,204 @@
+[ 2018-11-26T10:22:37+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-11-26T14:24:57+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-11-26T14:35:43+08:00 ] 192.168.2.37 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-11-26T14:55:30+08:00 ] 192.168.2.41 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-11-26T15:43:31+08:00 ] 192.168.2.37 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-11-26T16:01:06+08:00 ] 192.168.2.37 /top250
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+ERR: 无法加载模块:Top250
+
+[ 2018-11-26T16:01:08+08:00 ] 192.168.2.37 /top250
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+ERR: 无法加载模块:Top250
+
+[ 2018-11-26T16:02:18+08:00 ] 192.168.2.37 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-11-26T17:19:58+08:00 ] 192.168.2.37 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+ERR: 无法加载模块:Favicon
+
+[ 2018-11-26T17:51:11+08:00 ] 192.168.2.37 /user/info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T17:54:00+08:00 ] 192.168.2.37 /user/info?token=45cf090bce2a2584f3034393763f3b63
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T17:54:35+08:00 ] 192.168.2.37 /user/info?token=a9a9831115b8ad54df138a5737f4c4be
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T17:54:37+08:00 ] 192.168.2.37 /user/info?token=2f8cb79eda8f2af9ebeecdc237511c3e
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T17:54:38+08:00 ] 192.168.2.37 /user/info?token=c5340580c34686f5717c710114df0ddd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T17:54:39+08:00 ] 192.168.2.37 /user/info?token=e86652f81c1b2d84d1b3e7dcf569aca1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T17:54:39+08:00 ] 192.168.2.37 /user/info?token=9c4acf3fc28bc59b2e0c78972c072e99
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T17:54:40+08:00 ] 192.168.2.37 /user/info?token=03d4e6d15573ae9ea7f92b17caf8d84e
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T17:54:40+08:00 ] 192.168.2.37 /user/info?token=5eea407f2cdfd7ddabd08803068de741
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T17:54:40+08:00 ] 192.168.2.37 /user/info?token=df9a218a111718dbbea6d18cffb923df
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T17:54:41+08:00 ] 192.168.2.37 /user/info?token=3d7f5271c131e731775edacfb0e57859
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T17:55:36+08:00 ] 192.168.2.37 /user/info?token=acc67a6e43a8febb8a301de5ac65af88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T17:57:44+08:00 ] 192.168.2.37 /user/info?token=679ea21286644512e93f247019f1e9d7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T18:00:07+08:00 ] 192.168.2.37 /user/info?token=05c27712178bbd7564bf23948a11f092
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+ERR: 无法加载模块:User
+
+[ 2018-11-26T18:29:08+08:00 ] 192.168.2.37 /api/Api_v1/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+ERR: 无法加载模块:Api
+
+[ 2018-11-26T18:29:22+08:00 ] 192.168.2.37 /api/Api_v1/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+ERR: 无法加载模块:Api
+
+[ 2018-11-26T18:37:47+08:00 ] 192.168.2.37 /api/Api_v1/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+ERR: 无法加载模块:Api
+
+[ 2018-11-26T18:47:06+08:00 ] 192.168.2.37 /api/Api_v1/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+ERR: 无法加载模块:Api
+
+[ 2018-11-26T18:48:48+08:00 ] 192.168.2.37 /api/Api_v1/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+ERR: 无法加载模块:Api
+
+[ 2018-11-26T22:05:18+08:00 ] 192.168.2.37 /api/Api_v1/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+ERR: 无法加载模块:Api
+
+[ 2018-11-26T22:07:01+08:00 ] 192.168.2.37 /api/Api_v1/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+ERR: 无法加载模块:Api
+
+[ 2018-11-26T22:18:37+08:00 ] 192.168.2.37 /api/Api_v1/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+ERR: 无法加载模块:Api
+
+[ 2018-11-26T22:21:10+08:00 ] 192.168.2.37 /api/Api_v1/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+ERR: 无法加载模块:Api
+
+[ 2018-11-26T22:21:11+08:00 ] 192.168.2.37 /api/Api_v1/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+ERR: 无法加载模块:Api
+
+[ 2018-11-26T22:24:22+08:00 ] 192.168.2.37 /user/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+ERR: 无法加载模块:User
+

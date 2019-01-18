@@ -1,0 +1,452 @@
+[ 2019-01-07T16:58:34+08:00 ] 192.168.2.35 /WebApi_v1/Forum/imageDetail?dynamic_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000966s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_dynamic` [ RunTime:0.0024s ]
+SQL: SELECT a.dynamic_id,a.user_id,a.object,a.like_count,a.comment_count,b.nickname,b.head_portrait FROM sex_forum_dynamic a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.dynamic_id = '2' AND a.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Illegal string offset 'head_portrait' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 340 行.
+NOTIC: [2] Illegal string offset 'head_portrait' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 340 行.
+NOTIC: [2] Illegal string offset 'object' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 343 行.
+NOTIC: [2] Illegal string offset 'object' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 343 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 343 行.
+NOTIC: [2] Illegal string offset 'object' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 344 行.
+NOTIC: [2] Illegal string offset 'img_url' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 344 行.
+NOTIC: [2] Illegal string offset 'object' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 344 行.
+ERR: Cannot use string offset as an array
+
+[ 2019-01-07T17:00:05+08:00 ] 192.168.2.35 /WebApi_v1/Forum/imageDetail?dynamic_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_dynamic` [ RunTime:0.0129s ]
+SQL: SELECT a.dynamic_id,a.user_id,a.object,a.like_count,a.comment_count,b.nickname,b.head_portrait FROM sex_forum_dynamic a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.dynamic_id = '2' AND a.state = 1 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Illegal string offset 'head_portrait' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 340 行.
+NOTIC: [2] Illegal string offset 'head_portrait' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 340 行.
+NOTIC: [2] Illegal string offset 'object' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 343 行.
+NOTIC: [2] Illegal string offset 'object' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 343 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 343 行.
+NOTIC: [2] Illegal string offset 'object' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 344 行.
+NOTIC: [2] Illegal string offset 'img_url' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 344 行.
+NOTIC: [2] Illegal string offset 'object' D:\xampp\htdocs\Application\WebApi_v1\Controller\ForumController.class.php 第 344 行.
+ERR: Cannot use string offset as an array
+
+[ 2019-01-07T17:01:27+08:00 ] 192.168.2.35 /WebApi_v1/Forum/imageDetail?dynamic_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000927s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0176s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_dynamic` [ RunTime:0.0031s ]
+SQL: SELECT a.dynamic_id,a.user_id,a.object,a.like_count,a.comment_count,b.nickname,b.head_portrait FROM sex_forum_dynamic a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.dynamic_id = '2' AND a.state = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_fans` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `sex_forum_fans` WHERE `user_id` = 2 AND `touser_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2019-01-07T20:27:14+08:00 ] 192.168.2.35 /WebApi_v1/Forum/forumSearch?keywords=%E7%94%A8%E6%88%B7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001584s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_dynamic` [ RunTime:0.0032s ]
+SQL: SELECT a.dynamic_id,a.user_id,a.type,a.time,a.like_count,a.comment_count,a.is_forward,a.forward_id,a.object,b.nickname,b.head_portrait,b.experience FROM sex_forum_dynamic a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.state = 1 AND b.state = 1 AND ( b.nickname LIKE '%用户%' OR a.object LIKE '%用户%' ) ORDER BY time DESC LIMIT 0,6   [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_dynamic a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.state = 1 AND b.state = 1 AND ( b.nickname LIKE '%用户%' OR a.object LIKE '%用户%' ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2019-01-07T20:27:47+08:00 ] 192.168.2.35 /WebApi_v1/Forum/forumSearch?keywords=%E7%94%A8%E6%88%B7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_dynamic` [ RunTime:0.0035s ]
+SQL: SELECT a.dynamic_id,a.user_id,a.type,a.time,a.like_count,a.comment_count,a.is_forward,a.forward_id,a.object,b.nickname,b.head_portrait,b.experience FROM sex_forum_dynamic a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.state = 1 AND b.state = 1 AND ( b.nickname LIKE '%用户%' OR a.object LIKE '%用户%' ) ORDER BY time DESC LIMIT 0,6   [ RunTime:0.0037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_dynamic a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.state = 1 AND b.state = 1 AND ( b.nickname LIKE '%用户%' OR a.object LIKE '%用户%' ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2019-01-07T20:28:23+08:00 ] 192.168.2.35 /WebApi_v1/Forum/forumSearch?keywords=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_dynamic` [ RunTime:0.0024s ]
+SQL: SELECT a.dynamic_id,a.user_id,a.type,a.time,a.like_count,a.comment_count,a.is_forward,a.forward_id,a.object,b.nickname,b.head_portrait,b.experience FROM sex_forum_dynamic a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.state = 1 AND b.state = 1 AND ( b.nickname LIKE '%1%' OR a.object LIKE '%1%' ) ORDER BY time DESC LIMIT 0,6   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_dynamic a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.state = 1 AND b.state = 1 AND ( b.nickname LIKE '%1%' OR a.object LIKE '%1%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `sex_forum_fans` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `sex_forum_fans` WHERE `user_id` = 2 AND `touser_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_like` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `sex_forum_like` WHERE `user_id` = 2 AND `dynamic_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sex_forum_fans` WHERE `user_id` = 2 AND `touser_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sex_forum_like` WHERE `user_id` = 2 AND `dynamic_id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sex_forum_fans` WHERE `user_id` = 2 AND `touser_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sex_forum_like` WHERE `user_id` = 2 AND `dynamic_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2019-01-07T20:30:11+08:00 ] 192.168.2.35 /WebApi_v1/Forum/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001152s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_dynamic` [ RunTime:0.0035s ]
+SQL: SELECT a.dynamic_id,a.user_id,a.type,a.time,a.like_count,a.comment_count,a.is_forward,a.forward_id,a.object,b.nickname,b.head_portrait,b.experience FROM sex_forum_dynamic a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.state = 1 AND b.state = 1 ORDER BY a.time DESC LIMIT 0,6   [ RunTime:0.0034s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_dynamic a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.state = 1 AND b.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_forum_fans` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sex_forum_fans` WHERE `user_id` = 2 AND `touser_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_like` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_forum_like` WHERE `user_id` = 2 AND `dynamic_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sex_forum_fans` WHERE `user_id` = 2 AND `touser_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sex_forum_like` WHERE `user_id` = 2 AND `dynamic_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sex_forum_fans` WHERE `user_id` = 2 AND `touser_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sex_forum_like` WHERE `user_id` = 2 AND `dynamic_id` = 4 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-07T20:36:28+08:00 ] 192.168.2.35 /WebApi_v1/ForumUser/index?user_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `user_id`,`nickname`,`head_portrait`,`signature`,`experience` FROM `sex_user_list` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `sex_forum_dynamic` [ RunTime:0.0030s ]
+SQL: SELECT `dynamic_id`,`type`,`object`,`time`,`like_count`,`comment_count`,`is_forward`,`forward_id` FROM `sex_forum_dynamic` WHERE `user_id` = 1 ORDER BY time DESC LIMIT 0,4   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_forum_dynamic` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-07T20:37:46+08:00 ] 192.168.2.35 /WebApi_v1/ForumUser/index?user_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `user_id`,`nickname`,`head_portrait`,`signature`,`experience` FROM `sex_user_list` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `sex_forum_dynamic` [ RunTime:0.0027s ]
+SQL: SELECT `dynamic_id`,`type`,`object`,`time`,`like_count`,`comment_count`,`is_forward`,`forward_id` FROM `sex_forum_dynamic` WHERE `user_id` = 1 ORDER BY time DESC LIMIT 0,4   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_forum_dynamic` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-07T20:39:29+08:00 ] 192.168.2.35 /WebApi_v1/ForumUser/index?user_id=1&type=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001102s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `user_id`,`nickname`,`head_portrait`,`signature`,`experience` FROM `sex_user_list` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `sex_forum_fans` [ RunTime:0.0032s ]
+SQL: SELECT a.user_id,b.nickname,b.head_portrait,b.signature,b.experience FROM sex_forum_fans a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.touser_id = '1' ORDER BY time DESC LIMIT 0,8   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_fans a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.touser_id = '1' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-07T21:14:55+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0042s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0007s ]
+ERR: Think\Model:pages方法不存在！
+
+[ 2019-01-07T21:15:39+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000951s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0028s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,b.nickname,b.head_portrait FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 ORDER BY push_time LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-07T21:17:25+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001270s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0031s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0013s ]
+
+[ 2019-01-07T21:18:28+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000895s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0031s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2019-01-07T21:19:36+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0034s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0034s ]
+
+[ 2019-01-07T21:20:43+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0167s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0034s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0032s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,b.nickname,b.head_portrait FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 ORDER BY push_time LIMIT 0,6   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-07T21:23:54+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001247s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0031s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0033s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,b.nickname,b.head_portrait FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 ORDER BY push_time LIMIT 0,6   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-07T21:42:33+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000887s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000995s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0039s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0036s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,b.nickname,b.head_portrait FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 ORDER BY push_time LIMIT 0,6   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-07T21:43:16+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000806s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0035s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0030s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,b.nickname,b.head_portrait FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 ORDER BY push_time LIMIT 0,6   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-07T21:49:38+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000912s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001347s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0036s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0035s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,b.nickname,b.head_portrait FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 ORDER BY push_time LIMIT 0,6   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `user_id`,`nickname` FROM `sex_user_list` WHERE `user_id` = 22 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-07T21:52:58+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001296s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0026s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0024s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,b.nickname,b.head_portrait FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 ORDER BY push_time LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 LIMIT 1   [ RunTime:0.0003s ]
+ERR: 1054:Unknown column 'a.reply_id' in 'field list'
+ [ SQL语句 ] : SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,b.nickname FROM `sex_forum_reply` LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.parent_id = '23' AND a.state = 1 LIMIT 1  
+ERR: 1054:Unknown column 'a.reply_id' in 'field list'
+ [ SQL语句 ] : SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,b.nickname FROM `sex_forum_reply` LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.parent_id = '23' AND a.state = 1 LIMIT 1  
+
+[ 2019-01-07T21:53:32+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0039s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0033s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,b.nickname,b.head_portrait FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 ORDER BY push_time LIMIT 0,6   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.parent_id = '23' AND a.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-07T21:54:50+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000846s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0033s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0025s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,a.reply,b.nickname,b.head_portrait FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 ORDER BY push_time LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.parent_id = '23' AND a.state = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-07T21:56:02+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001062s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0129s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0036s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0034s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,a.reply,b.nickname,b.head_portrait FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 ORDER BY push_time LIMIT 0,6   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.parent_id = '23' AND a.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-07T21:57:03+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0164s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0037s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,a.reply,b.nickname,b.head_portrait FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 ORDER BY push_time LIMIT 0,6   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.parent_id = '23' AND a.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-07T21:59:17+08:00 ] 192.168.2.35 /WebApi_v1/Resources/allReply?comment_id=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001150s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0039s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.nickname,b.head_portrait,b.experience FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_level` [ RunTime:0.0034s ]
+SQL: SELECT a.reply_id,a.parent_id,a.user_id,a.push_time,a.reply,b.nickname,b.head_portrait FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 ORDER BY push_time LIMIT 0,6   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT a.reply_id,a.user_id,b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.parent_id = '23' AND a.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+

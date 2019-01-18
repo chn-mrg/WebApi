@@ -1,0 +1,87 @@
+[ 2018-12-29T15:33:09+08:00 ] ::1 /Api_v1/Login/Login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+ERR: SQLSTATE[HY000] [1049] Unknown database 'my-video'
+
+[ 2018-12-29T15:34:20+08:00 ] ::1 /Api_v1/Login/Login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0037s ]
+
+[ 2018-12-29T15:35:17+08:00 ] 127.0.0.1 /Api_v1/Login/Login?email=1092067674&userpwd=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `username` = '' OR `email` = '1092067674' OR (  `username` = '' OR `email` = '1092067674' ) OR `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] mt_rand(): max(99999) is smaller than min(100000) D:\wamp64\www\video\Application\Api_v1\Controller\LoginController.class.php 第 43 行.
+SQL: UPDATE `sex_user_list` SET `user_token`='664c985caaa70df23256cff0d081e293' WHERE `user_id` = 3 [ RunTime:0.0019s ]
+
+[ 2018-12-29T15:37:38+08:00 ] 127.0.0.1 /Api_v1/UserBase/getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+ERR: 非法操作:getUserInfo
+
+[ 2018-12-29T15:39:06+08:00 ] 127.0.0.1 /Api_v1/UserBase/getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 3 AND `user_token` = '664c985caaa70df23256cff0d081e293' LIMIT 1   [ RunTime:0.0003s ]
+ERR: 非法操作:getUserInfo
+
+[ 2018-12-29T15:39:27+08:00 ] ::1 /Api_v1/UserBase/getUserInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: user D:\wamp64\www\video\Application\Api_v1\Controller\UserBaseController.class.php 第 25 行.
+
+[ 2018-12-29T15:55:58+08:00 ] 127.0.0.1 /Api_v1/Login/Login?email=1092067674&userpwd=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `username` = '' OR `email` = '1092067674' OR (  `username` = '' OR `email` = '1092067674' ) OR `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] mt_rand(): max(99999) is smaller than min(100000) D:\wamp64\www\video\Application\Api_v1\Controller\LoginController.class.php 第 43 行.
+SQL: UPDATE `sex_user_list` SET `user_token`='cae621ce248db12fe655e7331d6cfae4' WHERE `user_id` = 3 [ RunTime:0.0034s ]
+
+[ 2018-12-29T16:39:32+08:00 ] 127.0.0.1 /Api_v1/Index/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+ERR: 无法加载控制器:Index
+

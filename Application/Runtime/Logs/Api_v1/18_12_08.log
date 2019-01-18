@@ -1,0 +1,137 @@
+[ 2018-12-08T00:00:11+08:00 ] 192.168.2.41 /Api_v1/Resource/SaveVideoTitle?mp4_key=%7b%23ResourceUrl%24%23%7d/TemMp4/20181207/2018120723583266620750.mp4&type=user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0188s ]
+SQL: SHOW COLUMNS FROM `sex_admin_user` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `sex_admin_user` WHERE `admin_id` = 1 AND `admin_token` = 'f4041acd715437324d729cf47bb0b3f3' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead D:\tools\xampp\htdocs\Application\Api_v1\Controller\MainController.class.php 第 110 行.
+
+[ 2018-12-08T00:00:16+08:00 ] 192.168.2.41 /Api_v1/UploadFile/uploadMp4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `sex_admin_user` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `sex_admin_user` WHERE `admin_id` = 1 AND `admin_token` = 'f4041acd715437324d729cf47bb0b3f3' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-12-08T00:00:22+08:00 ] 192.168.2.41 /Api_v1/Resource/SaveVideoTitle?mp4_key=%7b%23ResourceUrl%24%23%7d/TemMp4/20181207/2018120800001481665226.mp4&type=user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0116s ]
+SQL: SHOW COLUMNS FROM `sex_admin_user` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `sex_admin_user` WHERE `admin_id` = 1 AND `admin_token` = 'f4041acd715437324d729cf47bb0b3f3' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead D:\tools\xampp\htdocs\Application\Api_v1\Controller\MainController.class.php 第 110 行.
+
+[ 2018-12-08T00:00:28+08:00 ] 192.168.2.41 /Api_v1/Resource/SaveVideoTitle?mp4_key=%7b%23ResourceUrl%24%23%7d/TemMp4/20181207/2018120800001481665226.mp4&type=user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0186s ]
+SQL: SHOW COLUMNS FROM `sex_admin_user` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `sex_admin_user` WHERE `admin_id` = 1 AND `admin_token` = 'f4041acd715437324d729cf47bb0b3f3' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead D:\tools\xampp\htdocs\Application\Api_v1\Controller\MainController.class.php 第 110 行.
+
+[ 2018-12-08T00:00:41+08:00 ] 192.168.2.41 /Api_v1/Resource/SaveVideoTitle?mp4_key=%7b%23ResourceUrl%24%23%7d/TemMp4/20181208/2018120800001481665226.mp4&type=user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0176s ]
+SQL: SHOW COLUMNS FROM `sex_admin_user` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `sex_admin_user` WHERE `admin_id` = 1 AND `admin_token` = 'f4041acd715437324d729cf47bb0b3f3' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead D:\tools\xampp\htdocs\Application\Api_v1\Controller\MainController.class.php 第 110 行.
+
+[ 2018-12-08T00:01:18+08:00 ] 192.168.2.41 /Api_v1/UploadFile/uploadMp4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0115s ]
+SQL: SHOW COLUMNS FROM `sex_admin_user` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `sex_admin_user` WHERE `admin_id` = 1 AND `admin_token` = 'f4041acd715437324d729cf47bb0b3f3' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-12-08T00:01:30+08:00 ] 192.168.2.41 /Api_v1/Resource/SaveVideoTitle?mp4_key=%7b%23ResourceUrl%24%23%7d/TemMp4/20181208/2018120800011617343459.mp4&type=system
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0147s ]
+SQL: SHOW COLUMNS FROM `sex_admin_user` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `sex_admin_user` WHERE `admin_id` = 1 AND `admin_token` = 'f4041acd715437324d729cf47bb0b3f3' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead D:\tools\xampp\htdocs\Application\Api_v1\Controller\MainController.class.php 第 110 行.
+
+[ 2018-12-08T00:05:59+08:00 ] 192.168.2.41 /Api_v1/Resource/VideoTitleList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0149s ]
+SQL: SHOW COLUMNS FROM `sex_admin_user` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `sex_admin_user` WHERE `admin_id` = 1 AND `admin_token` = 'f4041acd715437324d729cf47bb0b3f3' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-12-08T00:34:29+08:00 ] 192.168.2.36 /Api_v1/AdminUser/AdminInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0175s ]
+SQL: SHOW COLUMNS FROM `sex_admin_user` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `sex_admin_user` WHERE `admin_id` = 2 AND `admin_token` = '96d4c63dab6f819adb91312385716d32' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2018-12-08T00:34:30+08:00 ] 192.168.2.36 /Api_v1/Resource/VideoTitleList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0214s ]
+SQL: SHOW COLUMNS FROM `sex_admin_user` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `sex_admin_user` WHERE `admin_id` = 2 AND `admin_token` = '96d4c63dab6f819adb91312385716d32' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-12-08T11:18:40+08:00 ] 192.168.2.36 /Api_v1/AdminUser/AdminInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005112s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `sex_admin_user` [ RunTime:0.0922s ]
+SQL: SELECT * FROM `sex_admin_user` WHERE `admin_id` = 2 AND `admin_token` = '96d4c63dab6f819adb91312385716d32' LIMIT 1   [ RunTime:0.0012s ]
+
+[ 2018-12-08T11:18:40+08:00 ] 192.168.2.36 /Api_v1/Resource/VideoTitleList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001011s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001736s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0244s ]
+SQL: SHOW COLUMNS FROM `sex_admin_user` [ RunTime:0.0199s ]
+SQL: SELECT * FROM `sex_admin_user` WHERE `admin_id` = 2 AND `admin_token` = '96d4c63dab6f819adb91312385716d32' LIMIT 1   [ RunTime:0.0012s ]
+

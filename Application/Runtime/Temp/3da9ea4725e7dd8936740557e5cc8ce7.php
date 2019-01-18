@@ -1,0 +1,3 @@
+<?php
+//000000000000a:4:{i:0;a:5:{s:11:"category_id";s:1:"7";s:9:"parent_id";s:1:"2";s:4:"name";s:13:"測試圖片1";s:4:"icon";s:56:"{#ResourceUrl$#}/Img/20181206/2018120613481855174176.jpg";s:5:"state";s:1:"1";}i:1;a:5:{s:11:"category_id";s:1:"8";s:9:"parent_id";s:1:"2";s:4:"name";s:13:"測試圖片2";s:4:"icon";s:56:"{#ResourceUrl$#}/Img/20181206/2018120613481855174176.jpg";s:5:"state";s:1:"1";}i:2;a:5:{s:11:"category_id";s:1:"9";s:9:"parent_id";s:1:"2";s:4:"name";s:13:"測試圖片3";s:4:"icon";s:56:"{#ResourceUrl$#}/Img/20181206/2018120613481855174176.jpg";s:5:"state";s:1:"1";}i:3;a:5:{s:11:"category_id";s:2:"14";s:9:"parent_id";s:1:"2";s:4:"name";s:15:"地方个地方";s:4:"icon";s:56:"{#ResourceUrl$#}/Img/20181206/2018120613481855174176.jpg";s:5:"state";s:1:"0";}}
+?>

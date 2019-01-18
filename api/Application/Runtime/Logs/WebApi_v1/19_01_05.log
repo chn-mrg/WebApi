@@ -1,0 +1,911 @@
+[ 2019-01-05T11:56:26+08:00 ] 192.168.2.35 //WebApi_v1/Index/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001925s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `sex_sys_banner_list` [ RunTime:0.0035s ]
+SQL: SELECT `banner_id`,`name`,`img`,`url`,`sort` FROM `sex_sys_banner_list` WHERE `type` = 0 AND `state` = 1 ORDER BY sort desc LIMIT 3   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0100s ]
+SQL: SELECT `movie_id`,`name`,`long`,`movie_url`,`movie_img` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_image` [ RunTime:0.0037s ]
+SQL: SELECT `image_id`,`name`,`long`,`image_url` FROM `sex_resource_image` WHERE `state` = 1 ORDER BY push_time desc LIMIT 5   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sex_resource_fiction` [ RunTime:0.0034s ]
+SQL: SELECT `fiction_id`,`name`,`image_url` FROM `sex_resource_fiction` WHERE `state` = 1 ORDER BY push_time desc LIMIT 8   [ RunTime:0.0004s ]
+
+[ 2019-01-05T12:25:22+08:00 ] 192.168.2.35 //WebApi_v1/Index/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `sex_sys_banner_list` [ RunTime:0.0028s ]
+SQL: SELECT `banner_id`,`name`,`img`,`url`,`sort` FROM `sex_sys_banner_list` WHERE `type` = 0 AND `state` = 1 ORDER BY sort desc LIMIT 3   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0024s ]
+SQL: SELECT `movie_id`,`name`,`long`,`movie_url`,`movie_img` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_image` [ RunTime:0.0027s ]
+SQL: SELECT `image_id`,`name`,`long`,`image_url` FROM `sex_resource_image` WHERE `state` = 1 ORDER BY push_time desc LIMIT 5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sex_resource_fiction` [ RunTime:0.0028s ]
+SQL: SELECT `fiction_id`,`name`,`image_url` FROM `sex_resource_fiction` WHERE `state` = 1 ORDER BY push_time desc LIMIT 8   [ RunTime:0.0003s ]
+
+[ 2019-01-05T12:27:31+08:00 ] 192.168.2.35 //WebApi_v1/Index/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001661s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `sex_sys_banner_list` [ RunTime:0.0184s ]
+SQL: SELECT `banner_id`,`name`,`img`,`url`,`sort` FROM `sex_sys_banner_list` WHERE `type` = 0 AND `state` = 1 ORDER BY sort desc LIMIT 3   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0032s ]
+SQL: SELECT `movie_id`,`name`,`long`,`movie_url`,`movie_img` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time desc LIMIT 4   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sex_resource_image` [ RunTime:0.0032s ]
+SQL: SELECT `image_id`,`name`,`long`,`image_url` FROM `sex_resource_image` WHERE `state` = 1 ORDER BY push_time desc LIMIT 5   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_resource_fiction` [ RunTime:0.0034s ]
+SQL: SELECT `fiction_id`,`name`,`image_url` FROM `sex_resource_fiction` WHERE `state` = 1 ORDER BY push_time desc LIMIT 8   [ RunTime:0.0004s ]
+
+[ 2019-01-05T12:35:00+08:00 ] 192.168.2.35 //WebApi_v1/Index/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000884s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `sex_sys_banner_list` [ RunTime:0.0042s ]
+SQL: SELECT `banner_id`,`name`,`img`,`url`,`sort` FROM `sex_sys_banner_list` WHERE `type` = 0 AND `state` = 1 ORDER BY sort desc LIMIT 3   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0037s ]
+SQL: SELECT `movie_id`,`name`,`long`,`movie_url`,`movie_img` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_resource_image` [ RunTime:0.0040s ]
+SQL: SELECT `image_id`,`name`,`long`,`image_url` FROM `sex_resource_image` WHERE `state` = 1 ORDER BY push_time desc LIMIT 5   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_resource_fiction` [ RunTime:0.0033s ]
+SQL: SELECT `fiction_id`,`name`,`image_url` FROM `sex_resource_fiction` WHERE `state` = 1 ORDER BY push_time desc LIMIT 8   [ RunTime:0.0004s ]
+
+[ 2019-01-05T16:33:32+08:00 ] 192.168.2.35 //WebApi_v1/Auth/login?phone=111&userpwd=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001743s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `userpwd` = 'e10adc3949ba59abbe56e057f20f883e' AND ( `phone` = '111' OR `email` = '' ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] mt_rand(): max(99999) is smaller than min(100000) D:\xampp\htdocs\Application\WebApi_v1\Controller\AuthController.class.php 第 41 行.
+SQL: UPDATE `sex_user_list` SET `user_token`='7b980ae2f40ec0edce2539de1dd860de' WHERE `user_id` = 2 [ RunTime:0.0018s ]
+
+[ 2019-01-05T16:35:47+08:00 ] 192.168.2.35 //WebApi_v1/Index/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_banner_list` [ RunTime:0.0026s ]
+SQL: SELECT `banner_id`,`name`,`img`,`url`,`sort` FROM `sex_sys_banner_list` WHERE `type` = 0 AND `state` = 1 ORDER BY sort desc LIMIT 3   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0027s ]
+SQL: SELECT `movie_id`,`name`,`long`,`movie_url`,`movie_img` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_image` [ RunTime:0.0025s ]
+SQL: SELECT `image_id`,`name`,`long`,`image_url` FROM `sex_resource_image` WHERE `state` = 1 ORDER BY push_time desc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_fiction` [ RunTime:0.0026s ]
+SQL: SELECT `fiction_id`,`name`,`image_url` FROM `sex_resource_fiction` WHERE `state` = 1 ORDER BY push_time desc LIMIT 8   [ RunTime:0.0005s ]
+
+[ 2019-01-05T16:49:10+08:00 ] 192.168.2.35 //WebApi_v1/Index/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001130s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0146s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_sys_banner_list` [ RunTime:0.0031s ]
+SQL: SELECT `banner_id`,`name`,`img`,`url` FROM `sex_sys_banner_list` WHERE `type` = 0 AND `state` = 1 ORDER BY sort desc LIMIT 3   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0031s ]
+SQL: SELECT `movie_id`,`name`,`long`,`movie_url`,`movie_img` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_image` [ RunTime:0.0030s ]
+SQL: SELECT `image_id`,`name`,`long`,`image_url` FROM `sex_resource_image` WHERE `state` = 1 ORDER BY push_time desc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_fiction` [ RunTime:0.0033s ]
+SQL: SELECT `fiction_id`,`name`,`image_url` FROM `sex_resource_fiction` WHERE `state` = 1 ORDER BY push_time desc LIMIT 8   [ RunTime:0.0007s ]
+
+[ 2019-01-05T16:56:37+08:00 ] 192.168.2.35 //WebApi_v1/Resources/getFirstCateGory
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001332s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_category_list` [ RunTime:0.0035s ]
+
+[ 2019-01-05T16:57:40+08:00 ] 192.168.2.35 //WebApi_v1/Resources/getFirstCateGory
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_category_list` [ RunTime:0.0032s ]
+
+[ 2019-01-05T16:58:13+08:00 ] 192.168.2.35 //WebApi_v1/Resources/getFirstCateGory
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_category_list` [ RunTime:0.0033s ]
+
+[ 2019-01-05T17:05:03+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001199s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0033s ]
+NOTIC: [8] Undefined variable: orderBy D:\xampp\htdocs\Application\WebApi_v1\Controller\MovieController.class.php 第 54 行.
+SQL: SELECT `movie_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`movie_img`,`movie_url` FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 0,4   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-05T17:11:25+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index?category_id=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001199s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0036s ]
+NOTIC: [8] Undefined variable: orderBy D:\xampp\htdocs\Application\WebApi_v1\Controller\MovieController.class.php 第 54 行.
+SQL: SELECT `movie_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`movie_img`,`movie_url` FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 0,4   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-05T17:11:49+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000980s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0034s ]
+NOTIC: [8] Undefined variable: orderBy D:\xampp\htdocs\Application\WebApi_v1\Controller\MovieController.class.php 第 54 行.
+SQL: SELECT `movie_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`movie_img`,`movie_url` FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 0,4   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-05T17:12:22+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0103s ]
+NOTIC: [8] Undefined variable: orderBy D:\xampp\htdocs\Application\WebApi_v1\Controller\MovieController.class.php 第 54 行.
+SQL: SELECT `movie_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`movie_img`,`movie_url` FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 0,4   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-05T17:13:38+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003016s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0035s ]
+NOTIC: [8] Undefined variable: orderBy D:\xampp\htdocs\Application\WebApi_v1\Controller\MovieController.class.php 第 54 行.
+SQL: SELECT `movie_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`movie_img`,`movie_url` FROM `sex_resource_movie` WHERE `state` = 1  [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-05T17:14:23+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000705s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0031s ]
+SQL: SELECT `movie_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`movie_img`,`movie_url` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time DESC  [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-05T17:15:38+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0018s ]
+
+[ 2019-01-05T17:16:15+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001384s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-05T17:16:40+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001098s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\Application\WebApi_v1\Controller\MainController.class.php 第 35 行.
+
+[ 2019-01-05T17:16:56+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2019-01-05T17:17:27+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000750s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0149s ]
+SQL: SELECT `movie_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`movie_img`,`movie_url` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time DESC LIMIT 0,4   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2019-01-05T17:18:14+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-05T17:18:57+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index?page=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001352s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2019-01-05T17:19:01+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index?page=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-05T17:19:21+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index?page=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0037s ]
+SQL: SELECT `movie_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`movie_img`,`movie_url` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time DESC LIMIT 0,4   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-05T17:19:32+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index?page=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000846s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0038s ]
+SQL: SELECT `movie_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`movie_img`,`movie_url` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time DESC LIMIT 4,4   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-05T17:27:28+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0031s ]
+SQL: SELECT `movie_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`movie_img`,`movie_url` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time DESC LIMIT 0,4   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-05T17:30:44+08:00 ] 192.168.2.35 //WebApi_v1/Resources/getCateGory
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000816s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2019-01-05T17:31:10+08:00 ] 192.168.2.35 //WebApi_v1/Resources/getCateGory?parent_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sex_sys_category_list` [ RunTime:0.0142s ]
+
+[ 2019-01-05T17:36:30+08:00 ] 192.168.2.35 //WebApi_v1/Resources/getLabel
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000832s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001122s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001181s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sex_sys_label_list` [ RunTime:0.0030s ]
+
+[ 2019-01-05T18:22:53+08:00 ] 192.168.2.35 //WebApi_v1/Resources/collection?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001307s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_notice_like` [ RunTime:0.0029s ]
+SQL: INSERT INTO `sex_notice_like` (`user_id`,`type`,`resource_id`,`time`) VALUES ('2','1','60','1546683773') [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0029s ]
+SQL: UPDATE `sex_resource_movie` SET `like_count`=like_count+1 WHERE `movie_id` = 60 [ RunTime:0.0013s ]
+
+[ 2019-01-05T18:27:27+08:00 ] 192.168.2.35 //WebApi_v1/Resources/collection?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001181s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001223s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0159s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-05T18:27:45+08:00 ] 192.168.2.35 //WebApi_v1/Resources/collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0143s ]
+
+[ 2019-01-05T18:48:20+08:00 ] 192.168.2.35 //WebApi_v1/Resources/collection?type=1&resource_id=61
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001178s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2019-01-05T18:49:29+08:00 ] 192.168.2.35 //WebApi_v1/Resources/collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_notice_like` [ RunTime:0.0034s ]
+SQL: INSERT INTO `sex_notice_like` (`user_id`,`type`,`resource_id`,`time`) VALUES ('2','1','61','1546685369') [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0034s ]
+SQL: UPDATE `sex_resource_movie` SET `like_count`=like_count+1 WHERE `movie_id` = 61 [ RunTime:0.0014s ]
+
+[ 2019-01-05T18:49:59+08:00 ] 192.168.2.35 //WebApi_v1/Resources/collection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_notice_like` [ RunTime:0.0045s ]
+SQL: INSERT INTO `sex_notice_like` (`user_id`,`type`,`resource_id`,`time`) VALUES ('2','1','61','1546685399') [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0033s ]
+SQL: UPDATE `sex_resource_movie` SET `like_count`=like_count+1 WHERE `movie_id` = 61 [ RunTime:0.0016s ]
+
+[ 2019-01-05T18:52:05+08:00 ] 192.168.2.35 //WebApi_v1/Resources/cancelCollect?like_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000786s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001224s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2019-01-05T18:52:56+08:00 ] 192.168.2.35 //WebApi_v1/Resources/cancelCollect?like_id=2&type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_notice_like` [ RunTime:0.0026s ]
+SQL: DELETE FROM `sex_notice_like` WHERE `like_id` = 2 [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0031s ]
+SQL: UPDATE `sex_resource_movie` SET `like_count`=like_count-1 WHERE `movie_id` = null [ RunTime:0.0003s ]
+
+[ 2019-01-05T18:57:07+08:00 ] 192.168.2.35 //WebApi_v1/Resources/cancelCollect?like_id=1&type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_notice_like` [ RunTime:0.0029s ]
+SQL: DELETE FROM `sex_notice_like` WHERE `like_id` = 1 [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0067s ]
+SQL: UPDATE `sex_resource_movie` SET `like_count`=like_count-1 WHERE `movie_id` = 60 [ RunTime:0.0012s ]
+
+[ 2019-01-05T20:32:41+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0026s ]
+SQL: SELECT `movie_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`movie_img`,`movie_url` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time DESC LIMIT 0,4   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sex_notice_like` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `sex_notice_like` WHERE `user_id` = 2 AND `resource_id` = 71 AND `type` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sex_notice_like` WHERE `user_id` = 2 AND `resource_id` = 70 AND `type` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sex_notice_like` WHERE `user_id` = 2 AND `resource_id` = 69 AND `type` = 1 LIMIT 1   [ RunTime:0.0113s ]
+SQL: SELECT * FROM `sex_notice_like` WHERE `user_id` = 2 AND `resource_id` = 68 AND `type` = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-05T20:35:26+08:00 ] 192.168.2.35 //WebApi_v1/Movie/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0086s ]
+SQL: SELECT `movie_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`movie_img`,`movie_url` FROM `sex_resource_movie` WHERE `state` = 1 ORDER BY push_time DESC LIMIT 0,4   [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_movie` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_notice_like` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sex_notice_like` WHERE `user_id` = 2 AND `resource_id` = 71 AND `type` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sex_notice_like` WHERE `user_id` = 2 AND `resource_id` = 70 AND `type` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sex_notice_like` WHERE `user_id` = 2 AND `resource_id` = 69 AND `type` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sex_notice_like` WHERE `user_id` = 2 AND `resource_id` = 68 AND `type` = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-05T20:43:33+08:00 ] 192.168.2.35 //WebApi_v1/Image/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_image` [ RunTime:0.0027s ]
+SQL: SELECT `image_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`image_url` FROM `sex_resource_image` WHERE `state` = 1 ORDER BY push_time DESC LIMIT 0,4   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_image` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\ImageController.class.php 第 66 行.
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\ImageController.class.php 第 66 行.
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\ImageController.class.php 第 66 行.
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\ImageController.class.php 第 66 行.
+
+[ 2019-01-05T20:44:01+08:00 ] 192.168.2.35 /WebApi_v1/Image/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000990s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_image` [ RunTime:0.0031s ]
+SQL: SELECT `image_id`,`name`,`score`,`long`,`like_count`,`comment_count`,`watch_count`,`image_url` FROM `sex_resource_image` WHERE `state` = 1 ORDER BY push_time DESC LIMIT 0,4   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_image` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\ImageController.class.php 第 66 行.
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\ImageController.class.php 第 66 行.
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\ImageController.class.php 第 66 行.
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\ImageController.class.php 第 66 行.
+
+[ 2019-01-05T20:50:50+08:00 ] 192.168.2.35 /WebApi_v1/Fiction/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001081s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_resource_fiction` [ RunTime:0.0032s ]
+SQL: SELECT `fiction_id`,`name`,`image_url` FROM `sex_resource_fiction` WHERE `state` = 1 ORDER BY push_time DESC LIMIT 0,9   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sex_resource_fiction` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\FictionController.class.php 第 63 行.
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\FictionController.class.php 第 63 行.
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\FictionController.class.php 第 63 行.
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\FictionController.class.php 第 63 行.
+NOTIC: [8] Undefined index: movie_id D:\xampp\htdocs\Application\WebApi_v1\Controller\FictionController.class.php 第 63 行.
+
+[ 2019-01-05T21:22:49+08:00 ] 192.168.2.35 /WebApi_v1/Movie/movieDetail?movie_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0027s ]
+SQL: SELECT a.movie_id,a.category_id,a.label_ids,a.name,a.score,a.long,a.like_count,a.comment_count,a.comment_count,a.movie_url,a.movie_img,a.introduction,a.money,b.name as category_name FROM sex_resource_movie a LEFT JOIN sex_sys_category_list b ON b.category_id = a.category_id  WHERE a.movie_id = '60' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_sys_label_list` [ RunTime:0.0071s ]
+
+[ 2019-01-05T21:23:05+08:00 ] 192.168.2.35 /WebApi_v1/Movie/movieDetail?movie_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0089s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0035s ]
+SQL: SELECT a.movie_id,a.label_ids,a.name,a.score,a.long,a.like_count,a.comment_count,a.comment_count,a.movie_url,a.movie_img,a.introduction,a.money,b.name as category_name FROM sex_resource_movie a LEFT JOIN sex_sys_category_list b ON b.category_id = a.category_id  WHERE a.movie_id = '60' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_sys_label_list` [ RunTime:0.0035s ]
+
+[ 2019-01-05T21:23:21+08:00 ] 192.168.2.35 /WebApi_v1/Movie/movieDetail?movie_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0035s ]
+SQL: SELECT a.movie_id,a.category_id,a.label_ids,a.name,a.score,a.long,a.like_count,a.comment_count,a.comment_count,a.movie_url,a.movie_img,a.introduction,a.money,b.name as category_name FROM sex_resource_movie a LEFT JOIN sex_sys_category_list b ON b.category_id = a.category_id  WHERE a.movie_id = '60' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_sys_label_list` [ RunTime:0.0155s ]
+
+[ 2019-01-05T21:23:55+08:00 ] 192.168.2.35 /WebApi_v1/Movie/movieDetail?movie_id=61
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0035s ]
+SQL: SELECT a.movie_id,a.category_id,a.label_ids,a.name,a.score,a.long,a.like_count,a.comment_count,a.comment_count,a.movie_url,a.movie_img,a.introduction,a.money,b.name as category_name FROM sex_resource_movie a LEFT JOIN sex_sys_category_list b ON b.category_id = a.category_id  WHERE a.movie_id = '61' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_sys_label_list` [ RunTime:0.0034s ]
+
+[ 2019-01-05T21:29:04+08:00 ] 192.168.2.35 /WebApi_v1/Movie/movieDetail?movie_id=61
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001220s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_resource_movie` [ RunTime:0.0025s ]
+SQL: SELECT a.movie_id,a.category_id,a.label_ids,a.name,a.score,a.long,a.like_count,a.comment_count,a.comment_count,a.movie_url,a.movie_img,a.introduction,a.money,b.name as category_name FROM sex_resource_movie a LEFT JOIN sex_sys_category_list b ON b.category_id = a.category_id  WHERE a.movie_id = '61' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_sys_label_list` [ RunTime:0.0023s ]
+
+[ 2019-01-05T21:40:46+08:00 ] 192.168.2.35 /WebApi_v1/Resources/getCommentReply?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001177s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0030s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time DESC LIMIT 0,3   [ RunTime:0.0007s ]
+
+[ 2019-01-05T21:43:24+08:00 ] 192.168.2.35 /WebApi_v1/Resources/getCommentReply?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0099s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time DESC LIMIT 0,3   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0033s ]
+SQL: SELECT a.reply_id,a.reply,a.user_id,b.user_id,b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE `parent_id` = 0 AND a.comment_id = '24' AND a.state = 1 AND b.state = 1 ORDER BY a.push_time DESC LIMIT 3   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 AND b.state = 1 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2019-01-05T21:44:55+08:00 ] 192.168.2.35 /WebApi_v1/Resources/getCommentReply?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0039s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time DESC LIMIT 0,3   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0034s ]
+SQL: SELECT a.reply_id,a.reply,a.user_id,b.user_id,b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE `parent_id` = 0 AND a.comment_id = '24' AND a.state = 1 AND b.state = 1 ORDER BY a.push_time DESC LIMIT 3   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 AND b.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-05T21:45:00+08:00 ] 192.168.2.35 /WebApi_v1/Resources/getCommentReply?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000931s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0121s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time DESC LIMIT 0,3   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0034s ]
+SQL: SELECT a.reply_id,a.reply,a.user_id,b.user_id,b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE `parent_id` = 0 AND a.comment_id = '24' AND a.state = 1 AND b.state = 1 ORDER BY a.push_time DESC LIMIT 3   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 AND b.state = 1 LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2019-01-05T21:46:53+08:00 ] 192.168.2.35 /WebApi_v1/Resources/getCommentReply?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001199s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001227s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0174s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0036s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time DESC LIMIT 0,3   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0043s ]
+SQL: SELECT a.reply_id,a.reply,a.user_id,b.user_id,b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE `parent_id` = 0 AND a.comment_id = '24' AND a.state = 1 AND b.state = 1 ORDER BY a.push_time DESC LIMIT 3   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 AND b.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-05T21:47:32+08:00 ] 192.168.2.35 /WebApi_v1/Resources/getCommentReply?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000929s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0040s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time DESC LIMIT 0,3   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0038s ]
+SQL: SELECT a.reply_id,a.reply,a.user_id,b.user_id,b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE `parent_id` = 0 AND a.comment_id = '24' AND a.state = 1 AND b.state = 1 ORDER BY a.push_time DESC LIMIT 3   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 AND b.state = 1 LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2019-01-05T21:48:32+08:00 ] 192.168.2.35 /WebApi_v1/Resources/getCommentReply?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0148s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time DESC LIMIT 0,3   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0033s ]
+SQL: SELECT a.reply_id,a.reply,a.user_id,b.user_id,b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE `parent_id` = 0 AND a.comment_id = '24' AND a.state = 1 AND b.state = 1 ORDER BY a.push_time DESC LIMIT 3   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 AND b.state = 1 LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2019-01-05T21:52:53+08:00 ] 192.168.2.35 /WebApi_v1/Resources/getCommentReply?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0094s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0028s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'des LIMIT 0,3' at line 1
+ [ SQL语句 ] : SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time des LIMIT 0,3  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'des LIMIT 0,3' at line 1
+ [ SQL语句 ] : SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time des LIMIT 0,3  
+
+[ 2019-01-05T21:53:02+08:00 ] 192.168.2.35 /WebApi_v1/Resources/getCommentReply?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0047s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DEC LIMIT 0,3' at line 1
+ [ SQL语句 ] : SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time DEC LIMIT 0,3  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DEC LIMIT 0,3' at line 1
+ [ SQL语句 ] : SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time DEC LIMIT 0,3  
+
+[ 2019-01-05T21:53:16+08:00 ] 192.168.2.35 /WebApi_v1/Resources/getCommentReply?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0026s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time LIMIT 0,3   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0027s ]
+SQL: SELECT a.reply_id,a.reply,a.user_id,b.user_id,b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE `parent_id` = 0 AND a.comment_id = '24' AND a.state = 1 AND b.state = 1 ORDER BY a.push_time DESC LIMIT 3   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 AND b.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-05T21:58:07+08:00 ] 192.168.2.35 /WebApi_v1/Resources/getCommentReply?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001431s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0028s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time LIMIT 0,3   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0027s ]
+SQL: SELECT a.reply_id,a.reply,a.user_id,b.user_id,b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE `parent_id` = 0 AND a.comment_id = '24' AND a.state = 1 AND b.state = 1 ORDER BY a.push_time DESC LIMIT 3   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 AND b.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-01-05T22:00:19+08:00 ] 192.168.2.35 /WebApi_v1/Resources/getCommentReply?type=1&resource_id=60
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0026s ]
+SQL: SELECT a.comment_id,a.user_id,a.comment,a.push_time,b.user_id,b.nickname,b.head_portrait FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 ORDER BY push_time LIMIT 0,3   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_comment a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.type = '1' AND a.resource_id = '60' AND a.state = 1 AND b.state = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0027s ]
+SQL: SELECT a.reply_id,a.reply,a.user_id,b.user_id,b.nickname FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE `parent_id` = 0 AND a.comment_id = '24' AND a.state = 1 AND b.state = 1 ORDER BY a.push_time DESC LIMIT 3   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sex_forum_reply a LEFT JOIN sex_user_list b ON b.user_id = a.user_id  WHERE a.comment_id = '24' AND a.state = 1 AND b.state = 1 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-01-05T22:04:25+08:00 ] 192.168.2.35 /WebApi_v1/Resources/commentOn?type=1&resource_id=60&comment=%E5%93%88%E5%93%88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001125s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sex_forum_comment` [ RunTime:0.0033s ]
+SQL: INSERT INTO `sex_forum_comment` (`type`,`resource_id`,`user_id`,`comment`,`state`) VALUES ('1','60','2','哈哈','0') [ RunTime:0.0033s ]
+
+[ 2019-01-05T22:08:56+08:00 ] 192.168.2.35 /WebApi_v1/Resources/replyOn?comment_id=24&reply=%E5%97%AF%E5%97%AF
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000982s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001195s ]
+SQL: SHOW COLUMNS FROM `sex_sys_conf` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `sex_user_list` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `sex_user_list` WHERE `user_id` = 2 AND `user_token` = '7b980ae2f40ec0edce2539de1dd860de' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sex_forum_reply` [ RunTime:0.0065s ]
+SQL: INSERT INTO `sex_forum_reply` (`parent_id`,`comment_id`,`user_id`,`reply`,`push_time`,`state`) VALUES ('0','24','2','嗯嗯','1546697336','0') [ RunTime:0.0013s ]
+

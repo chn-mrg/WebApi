@@ -86,9 +86,9 @@ class ForumUserController extends UserBaseController
                 $isBtn                   = 2; //不显示
             }else{
                 if($user['user_id'] != $user_id) {
-                    $isBtn               = 1; //显示
-                }else{
                     $isBtn               = 2; //不显示
+                }else{
+                    $isBtn               = 1; //显示
                 }
             }
 
@@ -130,8 +130,18 @@ class ForumUserController extends UserBaseController
                     }
                 }
             }
+            //是否显示删除按钮
+            if(!$user) {
+                $isBtn                   = 2; //不显示
+            }else{
+                if($user['user_id'] != $user_id) {
+                    $isBtn               = 2; //不显示
+                }else{
+                    $isBtn               = 1; //显示
+                }
+            }
 
-            self::returnAjax(200, array('pages'=>array('count'=>$fansCount,'num'=>$num),'list'=>array('user'=>$userInfo,'fans'=>$fans,'toFans'=>array(),'btn'=>2,'dynamic'=>array())));
+            self::returnAjax(200, array('pages'=>array('count'=>$fansCount,'num'=>$num),'list'=>array('user'=>$userInfo,'fans'=>$fans,'toFans'=>array(),'btn'=>$isBtn,'dynamic'=>array())));
         }
 
         //用户的关注
@@ -161,8 +171,18 @@ class ForumUserController extends UserBaseController
                     }
                 }
             }
+            //是否显示删除按钮
+            if(!$user) {
+                $isBtn                   = 2; //不显示
+            }else{
+                if($user['user_id'] != $user_id) {
+                    $isBtn               = 2; //显示
+                }else{
+                    $isBtn               = 1; //不显示
+                }
+            }
 
-            self::returnAjax(200, array('pages'=>array('count'=>$fansCount,'num'=>$num),'list'=>array('toFans'=>$fans,'dynamic'=>array(),'fans'=>array(),'btn'=>2,'user'=>$userInfo)));
+            self::returnAjax(200, array('pages'=>array('count'=>$fansCount,'num'=>$num),'list'=>array('toFans'=>$fans,'dynamic'=>array(),'fans'=>array(),'btn'=>$isBtn,'user'=>$userInfo)));
         }
     }
 

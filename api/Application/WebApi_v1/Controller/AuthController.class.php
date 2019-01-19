@@ -31,7 +31,7 @@ class AuthController extends MainController
         $map                = array();
 
         $map['userpwd']     = $userpwd;
-        $map['_query']      = 'phone=' .$phone. '&email=' .$phone. '&username=' .'&_logic=or';
+        $map['_query']      = 'phone=' .$phone. '&email=' .$phone. '&username=' .$phone .'&_logic=or';
 
         $UserInfo           = $UserM->where($map)->find();
 

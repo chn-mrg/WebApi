@@ -61,24 +61,24 @@ class ForumUserController extends UserBaseController
             $dynamicM           = M('forum_dynamic');
             $dynamic            = $dynamicM->field('dynamic_id,type,object,time,like_count,comment_count,is_forward,forward_id')->where(array('user_id' => $user_id))->order('time DESC')->page($page,$num)->select();
             $dynamicCount       = $dynamicM->where(array('user_id' => $user_id))->count();
-            if(!$dynamic || !$dynamicCount) {
-                self::returnAjax(404);
-            }
+            if(!$dynamic) {
+                $dynamic        = array();
+            }else{
+                foreach ($dynamic as $k => $v) {
+                    //发布时间转换为几分钟前、几小时前、、、几年前
+                    $dynamic[$k]['time']            = self::formatDate($v['time']);
+                    $dynamic[$k]['object']          = ((array)json_decode($v['object']));
+                    //根据type类型 转换视频路径及图片路径
+                    if($v['type'] == 1) { //1 视频
+                        //视频路径
 
-            foreach ($dynamic as $k => $v) {
-                //发布时间转换为几分钟前、几小时前、、、几年前
-                $dynamic[$k]['time']            = self::formatDate($v['time']);
-                $dynamic[$k]['object']          = ((array)json_decode($v['object']));
-                //根据type类型 转换视频路径及图片路径
-                if($v['type'] == 1) { //1 视频
-                    //视频路径
+                        $dynamic[$k]['object']['video_img']     = self::ResourceUrl($dynamic[$k]['object']['video_img']); //转换视频封面路径
+                        $dynamic[$k]['object']['long']          = self::MinToTime($dynamic[$k]['object']['long']); //视频分钟转换为时分秒格式
+                    }
 
-                    $dynamic[$k]['object']['video_img']     = self::ResourceUrl($dynamic[$k]['object']['video_img']); //转换视频封面路径
-                    $dynamic[$k]['object']['long']          = self::MinToTime($dynamic[$k]['object']['long']); //视频分钟转换为时分秒格式
-                }
-
-                if($v['type'] == 2) { //图片
-                    $dynamic[$k]['object']['img_url']       = self::ResourceUrl($dynamic[$k]['object']['img_url']);
+                    if($v['type'] == 2) { //图片
+                        $dynamic[$k]['object']['img_url']       = self::ResourceUrl($dynamic[$k]['object']['img_url']);
+                    }
                 }
             }
             //是否显示删除按钮
@@ -92,7 +92,7 @@ class ForumUserController extends UserBaseController
                 }
             }
 
-            self::returnAjax(200, array('pages'=>array('count'=>$dynamicCount,'num'=>$num),'list'=>array('user'=>$userInfo,'dynamic'=>$dynamic,'btn'=>$isBtn)));
+            self::returnAjax(200, array('pages'=>array('count'=>$dynamicCount,'num'=>$num),'list'=>array('user'=>$userInfo,'dynamic'=>$dynamic,'btn'=>$isBtn,'fans'=>array(),'toFans'=>array())));
         }
 
         //粉丝 我是被关注者
@@ -108,29 +108,30 @@ class ForumUserController extends UserBaseController
                                 ->page($page,$num)
                                 ->select();
             $fansCount          = $fansM->alias('a')->join('LEFT JOIN sex_user_list b ON b.user_id = a.user_id')->where(array('a.touser_id'=>$user_id))->count();
-            if(!$fans || !$fansCount) {
-                self::returnAjax(404);
-            }
-            foreach ($fans as $k => $v) {
-                //粉丝头像
-                $fans[$k]['head_portrait']      = self::ResourceUrl($v['head_portrait']);
+            if(!$fans) {
+                $fans           = array();
+            }else{
+                foreach ($fans as $k => $v) {
+                    //粉丝头像
+                    $fans[$k]['head_portrait']      = self::ResourceUrl($v['head_portrait']);
 
-                //粉丝等级
-                $level                          = self::level($fans[$k]['experience']);
-                if($level) {
-                    $fans[$k]['level']          = $level['level']; //等级名称
-                    $fans[$k]['icon']           = $level['icon']; //等级标志
-                }
-                //用户是否与粉丝互相关注
-                $isFans                     = self::userTouser($user_id,$v['user_id']);
-                if($isFans) {
-                    $fans[$k]['isFans']     = 1; //已关注
-                }else{
-                    $fans[$k]['isFans']     = 2; //未关注
+                    //粉丝等级
+                    $level                          = self::level($fans[$k]['experience']);
+                    if($level) {
+                        $fans[$k]['level']          = $level['level']; //等级名称
+                        $fans[$k]['icon']           = $level['icon']; //等级标志
+                    }
+                    //用户是否与粉丝互相关注
+                    $isFans                     = self::userTouser($user_id,$v['user_id']);
+                    if($isFans) {
+                        $fans[$k]['isFans']     = 1; //已关注
+                    }else{
+                        $fans[$k]['isFans']     = 2; //未关注
+                    }
                 }
             }
 
-            self::returnAjax(200, array('pages'=>array('count'=>$fansCount,'num'=>$num),'list'=>array('user'=>$userInfo,'fans'=>$fans)));
+            self::returnAjax(200, array('pages'=>array('count'=>$fansCount,'num'=>$num),'list'=>array('user'=>$userInfo,'fans'=>$fans,'toFans'=>array(),'btn'=>2,'dynamic'=>array())));
         }
 
         //用户的关注
@@ -139,7 +140,7 @@ class ForumUserController extends UserBaseController
             $fansM              = M('forum_fans');
             $fans               = $fansM
                                 ->alias('a')
-                                ->filed('a.fans_id,a.user_id, b.nickname,b.head_portrait,b.signature,b.experience')
+                                ->field('a.fans_id,a.user_id, b.nickname,b.head_portrait,b.signature,b.experience')
                                 ->join('LEFT JOIN sex_user_list b ON b.user_id = a.touser_id')
                                 ->where(array('a.user_id'=>$user_id))
                                 ->order('time DESC')
@@ -147,20 +148,21 @@ class ForumUserController extends UserBaseController
                                 ->select();
             $fansCount          = $fansM->alias('a')->join('LEFT JOIN sex_user_list b ON b.user_id = a.touser_id')->where(array('a.user_id'=>$user_id))->count();
             if(!$fans || !$fansCount) {
-                self::returnAjax(404);
-            }
-            foreach ($fans as $k => $v) {
-                //头像
-                $fans['head_portrait']      = self::ResourceUrl($fans['head_portrait']);
-                //用户等级
-                $level                       = self::level($v['experience']);
-                if($level) {
-                    $fans[$k]['level']       = $level['level']; //等级名称
-                    $fans[$k]['icon']        = $level['icon']; //等级标志
+                $fans           = array();
+            }else{
+                foreach ($fans as $k => $v) {
+                    //头像
+                    $fans[$k]['head_portrait']   = self::ResourceUrl($v['head_portrait']);
+                    //用户等级
+                    $level                       = self::level($v['experience']);
+                    if($level) {
+                        $fans[$k]['level']       = $level['level']; //等级名称
+                        $fans[$k]['icon']        = $level['icon']; //等级标志
+                    }
                 }
             }
 
-            self::returnAjax(200, array('pages'=>array('count'=>$fansCount,'num'=>$num),'list'=>$fans));
+            self::returnAjax(200, array('pages'=>array('count'=>$fansCount,'num'=>$num),'list'=>array('toFans'=>$fans,'dynamic'=>array(),'fans'=>array(),'btn'=>2,'user'=>$userInfo)));
         }
     }
 

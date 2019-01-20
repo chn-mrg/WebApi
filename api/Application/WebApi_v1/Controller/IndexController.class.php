@@ -46,7 +46,7 @@ class IndexController extends UserBaseController
 
         //福利图片
         $PictureM                       = M('resource_image');
-        $Pictures                       = $PictureM->field('image_id,name,long,image_url')->where(array('state' => 1))->limit(5)->order('push_time desc')->select();
+        $Pictures                       = $PictureM->field('image_id,name,long,image_url')->where(array('state' => 1))->limit(7)->order('push_time desc')->select();
 
         if($Pictures) {
             foreach ($Pictures as $k => $v) {

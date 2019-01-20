@@ -201,12 +201,15 @@ class MovieController extends UserBaseController
         if($userInfo!=null && 1==1){
             $m3u8 = self::ArrayToM3u8($request);
         }else{
-            $newM3u8array = array();
+            $newM3u8array = array(
+                'targetduration'=>$request['targetduration'],
+                'ts_list'=>array()
+            );
             $time = 0;
-            foreach ($request as $k=>$v){
+            foreach ($request['ts_list'] as $k=>$v){
                 if($time < 20) {  //修改播放時間
-                    $newM3u8array[] = $v;
-                    $time = $time + $v['ts_time'];
+                    $newM3u8array['ts_list'][] = $v;
+                    $time = $time + $v->ts_time;
                 }else{
                     break;
                 }

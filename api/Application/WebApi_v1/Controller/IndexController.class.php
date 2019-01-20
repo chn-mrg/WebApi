@@ -32,11 +32,11 @@ class IndexController extends UserBaseController
 
         //推荐视频
         $MovieM                         = M('resource_movie');
-        $Movie                          = $MovieM->field('movie_id,name,long,movie_url,movie_img')->where(array('state' => 1))->limit(4)->order('push_time desc')->select();
+        $Movie                          = $MovieM->field('movie_id,name,long,movie_img')->where(array('state' => 1))->limit(4)->order('push_time desc')->select();
 
         if($Movie) {
             foreach ($Movie as $k => $v) {
-                //$Movie['movie_url']         = "/WebApi_v1/Resource/PlayVideo/movie_id/".$v['movie_id']."/index.m3u8"; //视频播放地址
+                $Movie[$k]['movie_url'] = "/WebApi_v1/Movie/PlayAbbreviationVideo/movie_id/".$v['movie_id']."/index.m3u8";
                 $Movie[$k]['movie_img'] = self::ResourceUrl($v['movie_img']); //影片封面图
                 $Movie[$k]['long']      = self::MinToTime($v['long']);
             }

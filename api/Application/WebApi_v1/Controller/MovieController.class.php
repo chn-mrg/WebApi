@@ -60,7 +60,7 @@ class MovieController extends UserBaseController
         if($movieList) {
             foreach ($movieList as $k => $v) {
                 //影片地址、封面图地址
-                //$movieList[$k]['movie_url'] = "/Api_v1/Resource/PlayVideo/movie_id/".$v['movie_id']."/index.m3u8";
+                $movieList[$k]['movie_url'] = "/WebApi_v1/Movie/PlayAbbreviationVideo/movie_id/".$v['movie_id']."/index.m3u8";
                 $movieList[$k]['movie_img'] = self::ResourceUrl($v['movie_img']);
                 //时长转换
                 $movieList[$k]['long']      = self::MinToTime($v['long']);
@@ -115,6 +115,7 @@ class MovieController extends UserBaseController
         //时长转换
         $movieInfo['long']              = self::MinToTime($movieInfo['long']);
         //地址
+        $movieInfo['movie_url']         = "/WebApi_v1/Movie/PlayVideo/movie_id/".$movieInfo['movie_id']."/index.m3u8";
         $movieInfo['movie_img']         = self::ResourceUrl($movieInfo['movie_img']);
         //判断该资源是否已被用户收藏
         $userInfo                       = self::getUserInfo();

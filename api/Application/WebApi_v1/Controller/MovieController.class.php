@@ -147,7 +147,8 @@ class MovieController extends UserBaseController
             self::returnAjax(100005);
         }
 
-        $request = (array)json_encode(self::GetRequest($movie_info['movie_url']));
+        $json = self::GetRequest(self::ResourceUrl($movie_info['movie_url']));
+        $request = (array)json_decode($json);
         $num = count($request['ts_list']);
         $numran = $num > 5 ? floor($num / 5) : 1;
         $array = array(

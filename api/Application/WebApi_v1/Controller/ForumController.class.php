@@ -337,7 +337,6 @@ class ForumController extends UserBaseController
             self::returnAjax(404);
         }
 
-
         //用户头像
         $dynamic['head_portrait']   = self::ResourceUrl($dynamic['head_portrait']);
 
@@ -423,6 +422,7 @@ class ForumController extends UserBaseController
                 $dynamicInfo['isLike']          = 2; //未点赞
             }
         }
+
 
         //发布时间转换为几分钟前、几小时前、、、几年前
         $dynamicInfo['time']                = self::formatDate($dynamicInfo['time']);

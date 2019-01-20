@@ -99,7 +99,7 @@ class MovieController extends UserBaseController
 
         $movieInfo          = $movieM
                             ->alias('a')
-                            ->field('a.movie_id,a.category_id,a.label_ids,a.name,a.score,a.long,a.like_count,a.comment_count,a.comment_count,a.movie_url,a.movie_img,a.introduction,a.money, b.name as category_name')
+                            ->field('a.movie_id,a.category_id,a.label_ids,a.name,a.score,a.long,a.like_count,a.comment_count,a.comment_count,a.movie_img,a.introduction,a.money, b.name as category_name')
                             ->join('LEFT JOIN sex_sys_category_list b ON b.category_id = a.category_id')
                             ->where(array('a.movie_id' => $movie_id))
                             ->find();
@@ -134,6 +134,45 @@ class MovieController extends UserBaseController
 
 
         self::returnAjax(200, $movieInfo);
+    }
+
+    public function PlayAbbreviationVideo(){
+        $movie_id           = I('movie_id');
+        if(!$movie_id) {
+            self::returnAjax(100005);
+        }
+        $movieM         = M('resource_movie');
+        $movie_info = $movieM->field('movie_url')->where(array('movie_id'=>$movie_id))->find();
+        if(!$movie_info){
+            self::returnAjax(100005);
+        }
+
+        $request = (array)json_encode(self::GetRequest($movie_info['movie_url']));
+        $num = count($request['ts_list']);
+        $numran = $num > 5 ? floor($num / 5) : 1;
+        $array = array(
+            'targetduration' => $request['targetduration'],
+        );
+        if($request['ts_list'][($numran)]){
+            $array['ts_list'][] = $request['ts_list'][($numran)];
+        }
+        if($request['ts_list'][($numran*2)]){
+            $array['ts_list'][] = $request['ts_list'][($numran*2)];
+        }
+        if($request['ts_list'][($numran*3)]){
+            $array['ts_list'][] = $request['ts_list'][($numran * 3)];
+        }
+        if($request['ts_list'][($numran*4)]){
+            $array['ts_list'][] = $request['ts_list'][($numran * 4)];
+        }
+        $m3u8 = $this->ArrayToM3u8($array);
+        if ($m3u8) {
+            header('Content-type: application/vnd.apple.mpegurl');
+            echo $m3u8;
+            die();
+        }
+        echo "404";
+        die();
     }
 
 }

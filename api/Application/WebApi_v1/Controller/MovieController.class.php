@@ -54,13 +54,13 @@ class MovieController extends UserBaseController
         $movieM         = M('resource_movie');
 
 
-        $movieList      = $movieM->field('movie_id,name,score,long,like_count,comment_count,watch_count,movie_img')->where($selectWhere)->order($orderBy)->page($page,$num)->select();
+        $movieList      = $movieM->field('movie_id,name,score,long,like_count,comment_count,watch_count,movie_img,movie_url')->where($selectWhere)->order($orderBy)->page($page,$num)->select();
         $movieListCount = $movieM->where($selectWhere)->count();
 
         if($movieList) {
             foreach ($movieList as $k => $v) {
                 //影片地址、封面图地址
-                $movieList[$k]['movie_url'] = "/WebApi_v1/Movie/PlayAbbreviationVideo/movie_id/".$v['movie_id']."/index.m3u8";
+                $movieList[$k]['movie_url'] = self::ResourceUrl(str_replace("VideoM3u8.json","AbbreviationVideo.mp4",$v['movie_url']));
                 $movieList[$k]['movie_img'] = self::ResourceUrl($v['movie_img']);
                 //时长转换
                 $movieList[$k]['long']      = self::MinToTime($v['long']);

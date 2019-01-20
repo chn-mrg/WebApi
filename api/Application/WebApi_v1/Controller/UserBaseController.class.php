@@ -559,6 +559,23 @@ class UserBaseController extends MainController
         return $data;
     }
 
+    /*
+     * 将一个中文转换成一个字符
+     */
+    protected function abslength($str)
+    {
+        if(empty($str)){
+            return 0;
+        }
+        if(function_exists('mb_strlen')){
+            return mb_strlen($str,'utf-8');
+        }
+        else {
+            preg_match_all("/./u", $str, $ar);
+            return count($ar[0]);
+        }
+    }
+
     /**
      * 计算两个时间戳之间的时间
      */

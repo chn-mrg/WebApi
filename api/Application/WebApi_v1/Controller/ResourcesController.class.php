@@ -199,6 +199,11 @@ class ResourcesController extends UserBaseController
             self::returnAjax(100005);
         }
 
+        //評論字數限制最大250
+        if(self::abslength($comment) > 250){
+            self::returnAjax(100015);
+        }
+
         $result             = CommentToolController::comment($userInfo['user_id'], $type,$resource_id,$comment);
 
         if(!$result) {
@@ -228,6 +233,11 @@ class ResourcesController extends UserBaseController
 
         if(!$comment_id || !$reply || !is_numeric($parent_id)) {
             self::returnAjax(100005);
+        }
+
+        //評論字數限制最大250
+        if(self::abslength($reply) > 100){
+            self::returnAjax(100016);
         }
 
         $result             = CommentToolController::reply($userInfo['user_id'],$parent_id,$comment_id,$reply);

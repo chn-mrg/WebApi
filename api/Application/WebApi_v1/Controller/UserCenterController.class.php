@@ -381,7 +381,7 @@ class UserCenterController extends UserBaseController
             }
         }
 
-        self::returnAjax(200,array(array('pages'=>array('count'=>$browseCount,'num'=>$num),'list'=>$browseList)));
+        self::returnAjax(200,array('pages'=>array('count'=>$browseCount,'num'=>$num),'list'=>$browseList));
 
     }
 

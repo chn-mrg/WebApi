@@ -277,14 +277,14 @@ class UserCenterController extends UserBaseController
                                 ->alias('a')
                                 ->field('a.record_id,a.type,a.open_time,a.resource_id, b.type,b.object')
                                 ->join('LEFT JOIN sex_forum_dynamic b ON b.dynamic_id = a.resource_id')
-                                ->where(array('a.type'=>1,'a.user_id'=>$userInfo['user_id']))
+                                ->where(array('a.type'=>0,'a.user_id'=>$userInfo['user_id']))
                                 ->order('open_time DESC')
                                 ->page($page,$num)
                                 ->select();
             $browseCount        = $browseM
                                 ->alias('a')
                                 ->join('LEFT JOIN sex_forum_dynamic b ON b.dynamic_id = a.resource_id')
-                                ->where(array('a.type'=>1,'a.user_id'=>$userInfo['user_id']))
+                                ->where(array('a.type'=>0,'a.user_id'=>$userInfo['user_id']))
                                 ->count();
 
             if(!$browseCount) {
@@ -313,7 +313,7 @@ class UserCenterController extends UserBaseController
         if($type == 1) {
             $browseList         = $browseM
                                 ->alias('a')
-                                ->field('a.record_id,a.type,a.open_time,a.resource_id, b.name,b.long,b.movie_url,b.movie_img')
+                                ->field('a.record_id,a.type,a.open_time,a.resource_id, b.name,b.long,b.movie_img')
                                 ->join('LEFT JOIN sex_resource_movie b ON b.movie_id = a.resource_id')
                                 ->where(array('a.type'=>1,'a.user_id'=>$userInfo['user_id']))
                                 ->order('open_time DESC')

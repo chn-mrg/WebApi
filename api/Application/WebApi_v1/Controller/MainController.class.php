@@ -147,6 +147,7 @@ class MainController extends Controller
             $v = (array)$v;
             $m3u8 = $m3u8 . PHP_EOL . "#EXTINF:" . $v['ts_time'] . "," .
                 PHP_EOL . self::ResourceUrl((C('urlRule'))['ResourceUrl'] . "/" . $v['ts_path']);
+                //PHP_EOL . "https://dvvvj1udqgc6l.cloudfront.net/".$v['ts_path'];
 
         }
         $m3u8 = $m3u8 . PHP_EOL . "#EXT-X-ENDLIST";
@@ -182,6 +183,8 @@ class MainController extends Controller
         $curl=curl_init($url);
         curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
         curl_setopt($curl,CURLOPT_BINARYTRANSFER,true);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
         $data=curl_exec($curl);
         if($data === FALSE)
         {

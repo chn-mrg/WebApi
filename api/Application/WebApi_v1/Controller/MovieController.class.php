@@ -54,7 +54,7 @@ class MovieController extends UserBaseController
         $movieM         = M('resource_movie');
 
 
-        $movieList      = $movieM->field('movie_id,name,score,long,like_count,comment_count,watch_count,movie_img,movie_url')->where($selectWhere)->order($orderBy)->page($page,$num)->select();
+        $movieList      = $movieM->field('movie_id,name,score,long,like_count,comment_count,watch_count,movie_img')->where($selectWhere)->order($orderBy)->page($page,$num)->select();
         $movieListCount = $movieM->where($selectWhere)->count();
 
         if($movieList) {
@@ -136,6 +136,9 @@ class MovieController extends UserBaseController
         self::returnAjax(200, $movieInfo);
     }
 
+    /*
+     * 播放影片縮略
+     */
     public function PlayAbbreviationVideo(){
         $movie_id           = I('movie_id');
         if(!$movie_id) {
@@ -167,6 +170,33 @@ class MovieController extends UserBaseController
             $array['ts_list'][] = $request['ts_list'][($numran * 4)];
         }
         $m3u8 = self::ArrayToM3u8($array);
+        if ($m3u8) {
+            header('Content-type: application/vnd.apple.mpegurl');
+            echo $m3u8;
+            die();
+        }
+        echo "404";
+        die();
+    }
+
+
+    /*
+     * 播放完整影片
+     */
+    public function PlayVideo(){
+        $movie_id           = I('movie_id');
+        if(!$movie_id) {
+            self::returnAjax(100005);
+        }
+        $movieM         = M('resource_movie');
+        $movie_info = $movieM->field('movie_url')->where(array('movie_id'=>$movie_id))->find();
+        if(!$movie_info){
+            self::returnAjax(100005);
+        }
+
+        $json = self::GetRequest(self::ResourceUrl($movie_info['movie_url']));
+        $request = (array)json_decode($json);
+        $m3u8 = self::ArrayToM3u8($request);
         if ($m3u8) {
             header('Content-type: application/vnd.apple.mpegurl');
             echo $m3u8;

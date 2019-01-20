@@ -146,7 +146,7 @@ class MainController extends Controller
         foreach ($array['ts_list'] as $k => $v) {
             $v = (array)$v;
             $m3u8 = $m3u8 . PHP_EOL . "#EXTINF:" . $v['ts_time'] . "," .
-                PHP_EOL . self::ResourceAwsS3Url((C('urlRule'))['ResourceUrl'] . "/" . $v['ts_path']);
+                PHP_EOL . self::ResourceUrl((C('urlRule'))['ResourceUrl'] . "/" . $v['ts_path']);
 
         }
         $m3u8 = $m3u8 . PHP_EOL . "#EXT-X-ENDLIST";

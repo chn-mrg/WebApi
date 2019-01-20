@@ -64,7 +64,8 @@ class MovieController extends UserBaseController
                 $movieList[$k]['movie_img'] = self::ResourceUrl($v['movie_img']);
                 //时长转换
                 $movieList[$k]['long']      = self::MinToTime($v['long']);
-
+                //評分轉換
+                $movieList[$k]['score']     = $v['score'] / 10;
                 //判断该资源是否已被用户收藏
                 $userInfo                   = self::getUserInfo();
                 if($userInfo) {

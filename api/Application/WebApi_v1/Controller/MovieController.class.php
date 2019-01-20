@@ -165,7 +165,7 @@ class MovieController extends UserBaseController
         if($request['ts_list'][($numran*4)]){
             $array['ts_list'][] = $request['ts_list'][($numran * 4)];
         }
-        $m3u8 = $this->ArrayToM3u8($array);
+        $m3u8 = self::ArrayToM3u8($array);
         if ($m3u8) {
             header('Content-type: application/vnd.apple.mpegurl');
             echo $m3u8;

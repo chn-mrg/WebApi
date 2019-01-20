@@ -135,6 +135,25 @@ class MainController extends Controller
     }
 
     /*
+     * array轉m3u8
+     */
+    public function ArrayToM3u8($array){
+        $m3u8 = "#EXTM3U" .
+            PHP_EOL . "#EXT-X-VERSION:3" .
+            PHP_EOL . "#EXT-X-MEDIA-SEQUENCE:0" .
+            PHP_EOL . "#EXT-X-ALLOW-CACHE:YES" .
+            PHP_EOL . "#EXT-X-TARGETDURATION:" . $array['targetduration'];
+        foreach ($array['ts_list'] as $k => $v) {
+            $v = (array)$v;
+            $m3u8 = $m3u8 . PHP_EOL . "#EXTINF:" . $v['ts_time'] . "," .
+                PHP_EOL . self::ResourceAwsS3Url((C('urlRule'))['ResourceUrl'] . "/" . $v['ts_path']);
+
+        }
+        $m3u8 = $m3u8 . PHP_EOL . "#EXT-X-ENDLIST";
+        return $m3u8;
+    }
+
+    /*
      * post請求
      */
     protected function PostRequest($url,$post_data = array()){

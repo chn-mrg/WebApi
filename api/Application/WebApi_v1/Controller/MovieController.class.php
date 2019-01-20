@@ -194,10 +194,27 @@ class MovieController extends UserBaseController
         if(!$movie_info){
             self::returnAjax(100005);
         }
-
         $json = self::GetRequest(self::ResourceUrl($movie_info['movie_url']));
         $request = (array)json_decode($json);
-        $m3u8 = self::ArrayToM3u8($request);
+        $userInfo       = self::getUserInfo();
+
+        if($userInfo!=null && 1==1){
+            $m3u8 = self::ArrayToM3u8($request);
+        }else{
+            $newM3u8array = array();
+            $time = 0;
+            foreach ($request as $k=>$v){
+                if($time < 20) {  //修改播放時間
+                    $newM3u8array[] = $v;
+                    $time = $time + $v['ts_time'];
+                }else{
+                    break;
+                }
+            }
+            $m3u8 = self::ArrayToM3u8($newM3u8array);
+
+        }
+
         if ($m3u8) {
             header('Content-type: application/vnd.apple.mpegurl');
             echo $m3u8;
@@ -206,5 +223,4 @@ class MovieController extends UserBaseController
         echo "404";
         die();
     }
-
 }

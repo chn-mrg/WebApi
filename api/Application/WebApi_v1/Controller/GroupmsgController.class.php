@@ -13,14 +13,23 @@ use GatewayClient\Gateway;
 
 class GroupmsgController extends UserBaseController
 {
+
+    public function GetWebSocketUrl(){
+        $conf = self::GetSysConf("WebsocketUrl");
+        if($conf){
+            self::returnAjax(200,array('url'=>$conf['value']));
+        }
+        self::returnAjax(404);
+    }
+
     public function BindClientId(){
         $userInfo = self::getUserInfo();
         $client_id = I('client_id');
         $groupName = I('group');
         if($userInfo && $client_id &&($groupName=="group" || $groupName=="live")){
             $GatewayClient = new Gateway();
-
-            $GatewayClient::$registerAddress = "192.168.2.44:1238";
+            $conf = self::GetSysConf("RegisterAddress");
+            $GatewayClient::$registerAddress = $conf['value'];
 
             $uId = $userInfo['user_id'];
             $GatewayClient::bindUid($client_id, $uId);
@@ -37,7 +46,8 @@ class GroupmsgController extends UserBaseController
         $groupName = I('group');
         if($userInfo && $text &&($groupName=="group" || $groupName=="live")){
             $GatewayClient = new Gateway();
-            $GatewayClient::$registerAddress = "192.168.2.44:1238";
+            $conf = self::GetSysConf("RegisterAddress");
+            $GatewayClient::$registerAddress = $conf['value'];
             $levelInfo = self::level($userInfo['experience']);
             $textJson = array(
                 'user_id'=>$userInfo['user_id']."",
@@ -49,7 +59,7 @@ class GroupmsgController extends UserBaseController
                 'time'=>time()."",
             );
             $GatewayClient::sendToGroup($groupName,json_encode($textJson));
-            self:: returnAjax(301,'發送成功');
+            self:: returnAjax(200,'發送成功');
         }else{
             self:: returnAjax(301,'發送失敗');
         }

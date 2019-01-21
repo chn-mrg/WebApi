@@ -155,7 +155,7 @@ class UserCenterController extends UserBaseController
         //已购视频
         $movieList          = $resourceM
                             ->alias('a')
-                            ->field('a.list_id,a.user_id,a.type,a.resource_id,a.pey_type,a.out_time, b.name,b.movie_url,b.movie_img,b.long')
+                            ->field('a.list_id,a.user_id,a.type,a.resource_id,a.pey_type,a.out_time, b.name,b.movie_img,b.long')
                             ->join('LEFT JOIN sex_resource_movie b ON b.movie_id = a.resource_id')
                             ->where(array('a.type'=>1,'a.user_id'=>$userInfo['user_id']))
                             ->order('pey_time DESC')
@@ -182,7 +182,7 @@ class UserCenterController extends UserBaseController
                 }
             }
         }else{
-            $movieList      = 0;
+            $movieList      = array();
             $movieCount     = 0;
         }
 
@@ -213,7 +213,7 @@ class UserCenterController extends UserBaseController
                 }
             }
         }else{
-            $imgList        = 0;
+            $imgList        = array();
             $imgCount       = 0;
         }
 
@@ -244,11 +244,142 @@ class UserCenterController extends UserBaseController
                 }
             }
         }else{
-            $fictionList    = 0;
+            $fictionList    = array();
             $fictionCount   = 0;
         }
 
         self::returnAjax(200, array('movie'=>array('movieList'=>$movieList,'movieCount'=>$movieCount),'image'=>array('imgList'=>$imgList,'imgCount'=>$imgCount),'fiction'=>array('fictionList'=>$fictionList,'fictionCount'=>$fictionCount)));
+    }
+
+    /*
+     * 異構資源 更多
+     * type 資源類型 1-視頻 2-圖片 3-小説
+     * page 頁碼 默認 1
+     */
+    public function payResource() {
+
+        $userInfo           = self::getUserInfo();
+        if(!$userInfo) {
+            self::returnAjax(100012);
+        }
+
+        $type               = I('type');
+        $page               = I('page')? I('page') : 1;
+        $num                = 8;
+        if(!$type) {
+            self::returnAjax(100005);
+        }
+
+        $resourceM          = M('user_resource');
+
+        //異構視頻
+        if($type == 1) {
+            $List           = $resourceM
+                            ->alias('a')
+                            ->field('a.list_id,a.user_id,a.type,a.resource_id,a.pey_type,a.out_time,a.pey_time, b.name,b.movie_img,b.long')
+                            ->join('LEFT JOIN sex_resource_movie b ON b.movie_id = a.resource_id')
+                            ->where(array('a.type'=>1,'a.user_id'=>$userInfo['user_id']))
+                            ->order('pey_time DESC')
+                            ->page($page, $num)
+                            ->select();
+            $Count          = $resourceM
+                            ->alias('a')
+                            ->join('LEFT JOIN sex_resource_movie b ON b.movie_id = a.resource_id')
+                            ->where(array('a.type'=>1,'a.user_id'=>$userInfo['user_id']))
+                            ->count();
+            if($List) {
+                foreach ($List as $k => $v) {
+                    $List[$k]['movie_img'] = self::ResourceUrl($v['movie_img']); //封面图
+                    //时长转换
+                    $List[$k]['long']      = self::MinToTime($v['long']);
+                    //若为抵扣券购买，判断过期时间
+                    if($v['pey_type'] == 0) {
+                        $time   = self::timeDiff($v['out_time'], time());
+                        if($time) {
+                            $List[$k]['time'] = $time;
+                        }else{
+                            $List[$k]['time'] = 0;
+                        }
+                    }
+                    //購買時間
+                    $List[$k]['pey_time'] = date('Y-m-d H:i:s', $v['pey_time']);
+                }
+            }else{
+                self::returnAjax(404);
+            }
+        }
+
+        //異構圖片
+        if($type == 2) {
+            $List            = $resourceM
+                            ->alias('a')
+                            ->field('a.list_id,a.user_id,a.type,a.resource_id,a.pey_type,a.out_time,a.pey_time, b.name,b.image_url,b.long')
+                            ->join('LEFT JOIN sex_resource_image b ON b.image_id = a.resource_id')
+                            ->where(array('a.type'=>2,'a.user_id'=>$userInfo['user_id']))
+                            ->order('pey_time DESC')
+                            ->page($page, $num)
+                            ->select();
+            $Count           = $resourceM
+                            ->alias('a')
+                            ->join('LEFT JOIN sex_resource_image b ON b.image_id = a.resource_id')
+                            ->where(array('a.type'=>2,'a.user_id'=>$userInfo['user_id']))
+                            ->count();
+            if($List) {
+                foreach ($List as $k => $v) {
+                    $List[$k]['image_url'] = self::ResourceUrl($v['image_url']); //封面图
+                    //若为抵扣券购买，判断过期时间
+                    if($v['pey_type'] == 0) {
+                        $time   = self::timeDiff($v['out_time'], time());
+                        if($time) {
+                            $List[$k]['time'] = $time;
+                        }else{
+                            $List[$k]['time'] = 0;
+                        }
+                    }
+                    //購買時間
+                    $List[$k]['pey_time'] = date('Y-m-d H:i:s', $v['pey_time']);
+                }
+            }else{
+                self::returnAjax(404);
+            }
+        }
+
+        //異構小説
+        if($type == 3) {
+            $List        = $resourceM
+                        ->alias('a')
+                        ->field('a.list_id,a.user_id,a.type,a.resource_id,a.pey_type,a.out_time, b.name,b.image_url')
+                        ->join('LEFT JOIN sex_resource_fiction b ON b.fiction_id = a.resource_id')
+                        ->where(array('a.type'=>3,'a.user_id'=>$userInfo['user_id']))
+                        ->order('pey_time DESC')
+                        ->page($page,$num)
+                        ->select();
+            $Count      = $resourceM
+                        ->alias('a')
+                        ->join('LEFT JOIN sex_resource_fiction b ON b.fiction_id = a.resource_id')
+                        ->where(array('a.type'=>3,'a.user_id'=>$userInfo['user_id']))
+                        ->count();
+            if($List) {
+                foreach ($List as $k => $v) {
+                    $List[$k]['image_url'] = self::ResourceUrl($v['image_url']); //封面图
+                    //若为抵扣券购买，判断过期时间
+                    if($v['pey_type'] == 0) {
+                        $time   = self::timeDiff($v['out_time'], time());
+                        if($time) {
+                            $List[$k]['time'] = $time;
+                        }else{
+                            $List[$k]['time'] = 0;
+                        }
+                    }
+                    //購買時間
+                    $List[$k]['pey_time'] = date('Y-m-d H:i:s', $v['pey_time']);
+                }
+            }else{
+                self::returnAjax(404);
+            }
+        }
+
+        self::returnAjax(200, array('pages'=>array('count'=>$Count,'num'=>$num),'list'=>$List));
     }
 
     /*

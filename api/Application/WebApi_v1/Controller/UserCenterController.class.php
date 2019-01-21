@@ -110,8 +110,8 @@ class UserCenterController extends UserBaseController
                             ->join('LEFT JOIN sex_user_list b ON b.user_id = a.user_id')
                             ->where(array('a.type'=>0,'a.touser_id'=>$userInfo['user_id'],'a.state'=>0,'b.state'=>1))
                             ->order('time DESC')
-                            ->group('user_id')
-                            ->page($page,20)
+                            ->group('a.user_id')
+                            ->page($page,10)
                             ->select();
         $directNoticeCount  = $noticeM
                             ->alias('a')

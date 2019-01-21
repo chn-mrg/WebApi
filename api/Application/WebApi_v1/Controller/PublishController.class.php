@@ -61,7 +61,7 @@ class PublishController extends UserBaseController
         if($type == 2) {
             $text               = I('text'); //圖片文字
             $img_url            = I('img_url'); //圖片地址(數組)
-            if(!$img_url) {
+            if(empty($img_url)) {
                 self::returnAjax(100005);
             }
             $long               = count($img_url); //圖片數量

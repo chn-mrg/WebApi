@@ -1,3 +1,0 @@
-<?php
-//000000000000a:5:{i:0;a:5:{s:7:"conf_id";s:1:"1";s:4:"name";s:15:"資源站CDNURL";s:3:"key";s:11:"ResourceUrl";s:5:"value";s:23:"https://awss3.chnmrg.cc";s:4:"memo";s:2:"00";}i:1;a:5:{s:7:"conf_id";s:1:"2";s:4:"name";s:15:"資源站源URL";s:3:"key";s:8:"AwsS3Url";s:5:"value";s:46:"https://s3-ap-southeast-1.amazonaws.com/sex-s3";s:4:"memo";s:3:"111";}i:2;a:5:{s:7:"conf_id";s:1:"3";s:4:"name";s:15:"直播推流url";s:3:"key";s:11:"LiveRmtpUrl";s:5:"value";s:26:"rmtp://rtmp.chnmrg.cc/live";s:4:"memo";s:15:"直播推流url";}i:3;a:5:{s:7:"conf_id";s:1:"4";s:4:"name";s:18:"轉碼服務器Url";s:3:"key";s:9:"FFmpegUrl";s:5:"value";s:23:"https://rtmp.chnmrg.cc/";s:4:"memo";N;}i:4;a:5:{s:7:"conf_id";s:1:"5";s:4:"name";s:12:"滾動文字";s:3:"key";s:0:"";s:5:"value";s:18:"第三方士大夫";s:4:"memo";s:3:"dsf";}}
-?>

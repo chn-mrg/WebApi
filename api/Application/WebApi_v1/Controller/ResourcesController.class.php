@@ -307,6 +307,62 @@ class ResourcesController extends UserBaseController
     }
 
     /*
+     * 資源購買
+     * type 資源類型 1-視頻 2-圖片 3-小説
+     * pey_type 購買方式 0-資源券購買 1-G點購買
+     * resource_id 資源id
+     */
+    public function BuyResource(){
+
+        $userInfo           = self::getUserInfo();
+        if(!$userInfo) {
+            self::returnAjax(100012);
+        }
+
+        $type               = I('type');
+        $pey_type           = I('pey_type');
+        $resource_id        = I('resource_id');
+        if(!$type || !$pey_type || !$resource_id) {
+            self::returnAjax(100005);
+        }
+
+        //查詢購買資源花費
+        if($type == 1) {
+            $resourcesM             = M('resource_movie');
+            $where['movie_id']      = $resource_id;
+        }
+        if($type == 2) {
+            $resourcesM             = M('resource_image');
+            $where['image_id']      = $resource_id;
+        }
+        if($type == 3) {
+            $resourcesM             = M('resource_fiction');
+            $where['fiction_id']    = $resource_id;
+        }
+        $resourceInfo               = $resourcesM->where($where)->find();
+        if($resourceInfo) {
+            //根據支付方式 判斷用戶餘額
+
+            if($pey_type == 0 && $userInfo['watch'] >= $resourceInfo['watch_count']) { //資源券
+
+
+            }else{
+                self::returnAjax(100017);
+            }
+
+            if($pey_type == 1 && $userInfo['money'] >= $resourceInfo['money']) { //G
+
+
+            }else{
+                self::returnAjax(100017);
+            }
+
+        }else{
+            self::returnAjax(301);
+        }
+    }
+
+    /*
      * 资源转发
      */
     public function forwarding() {

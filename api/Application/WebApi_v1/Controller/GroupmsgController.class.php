@@ -15,11 +15,15 @@ class GroupmsgController extends UserBaseController
 {
 
     public function GetWebSocketUrl(){
-        $conf = self::GetSysConf("WebsocketUrl");
-        if($conf){
-            self::returnAjax(200,array('url'=>$conf['value']));
+        $userInfo = self::getUserInfo();
+        if($userInfo) {
+            $conf = self::GetSysConf("WebsocketUrl");
+            if ($conf) {
+                self::returnAjax(200, array('url' => $conf['value']));
+            }
+            self::returnAjax(404);
         }
-        self::returnAjax(404);
+        self:: returnAjax(100000);
     }
 
     public function BindClientId(){

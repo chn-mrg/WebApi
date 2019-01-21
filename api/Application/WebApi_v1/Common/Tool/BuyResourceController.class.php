@@ -19,14 +19,16 @@ class BuyResourceController
     protected static $type; //1-视频，2-图片，3-小说
     protected static $resource_id; //资源id
     protected static $pey_type; //购买方式 0-资源券购买 1-G点购买
+    protected static $money; //花費
 
 
-    public static function mode($user_id,$type,$resource_id,$pey_type)
+    public static function mode($user_id,$type,$resource_id,$pey_type,$money)
     {
         self::$user_id          = $user_id;
         self::$type             = $type;
         self::$resource_id      = $resource_id;
         self::$pey_type         = $pey_type;
+        self::$money            = $money;
 
         return self::buyResource();
     }
@@ -34,7 +36,7 @@ class BuyResourceController
     //购买
     protected static function buyResource()
     {
-        if(!self::$user_id || !self::$type || !self::$resource_id || !is_numeric(self::$pey_type)) {
+        if(!self::$user_id || !self::$type || !self::$resource_id || !is_numeric(self::$pey_type) || !self::$money) {
             return false;
             die();
         }
@@ -59,29 +61,13 @@ class BuyResourceController
         $result             = $resourceM->add($data);
 
         if($result) {
-            //查询购买资源消费
-            if(self::$type == 1){
-                $resourcesM         = M('resource_movie');
-                $where['movie_id']  = self::$resource_id;
-            }
-            if(self::$type == 2) {
-                $resourcesM = M('resource_image');
-                $where['image_id']  = self::$resource_id;
-            }
-            if(self::$type == 3) {
-                $resourcesM = M('resource_fiction');
-                $where['fiction_id']  = self::$resource_id;
-            }
-
-            $pay            = $resourcesM->where($where)->find();
-
             if(self::$pey_type == 0) {
                 //减少用户资源券
-                M('user_list')->where(array('user_id'=>self::$user_id))->setInc('watch',$pay['watch_count']);
+                M('user_list')->where(array('user_id'=>self::$user_id))->setDec('watch',self::$money);
                 //添加资源券消费记录
                 $watchData      = array(
                     'user_id'   => self::$user_id,
-                    'watch'     => $pay['watch_count'],
+                    'watch'     => self::$money,
                     'type'      => 0, //支出
                     'time'      => time(),
                     'memo'      => '购买资源支出'
@@ -90,11 +76,11 @@ class BuyResourceController
             }
             if (self::$pey_type == 1) {
                 //减少用户G点
-                M('user_list')->where(array('user_id'=>self::$user_id))->setInc('money',$pay['money']);
+                M('user_list')->where(array('user_id'=>self::$user_id))->setDec('money',self::$money);
                 //添加G点消费记录
                 $moneyData      = array(
                     'user_id'   => self::$user_id,
-                    'money'     => $pay['money'],
+                    'money'     => self::$money,
                     'type'      => 0, //支出
                     'time'      => time(),
                     'memo'      => '购买资源支出'

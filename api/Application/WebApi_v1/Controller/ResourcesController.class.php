@@ -9,6 +9,7 @@
 namespace WebApi_v1\Controller;
 
 
+use WebApi_v1\Common\Tool\BuyResourceController;
 use WebApi_v1\Common\Tool\CollectionToolController;
 use WebApi_v1\Common\Tool\CommentToolController;
 
@@ -322,7 +323,7 @@ class ResourcesController extends UserBaseController
         $type               = I('type');
         $pey_type           = I('pey_type');
         $resource_id        = I('resource_id');
-        if(!$type || !$pey_type || !$resource_id) {
+        if(!$type || !is_numeric($pey_type) || !$resource_id) {
             self::returnAjax(100005);
         }
 
@@ -340,21 +341,33 @@ class ResourcesController extends UserBaseController
             $where['fiction_id']    = $resource_id;
         }
         $resourceInfo               = $resourcesM->where($where)->find();
+
         if($resourceInfo) {
             //根據支付方式 判斷用戶餘額
-
-            if($pey_type == 0 && $userInfo['watch'] >= $resourceInfo['watch_count']) { //資源券
-
-
-            }else{
-                self::returnAjax(100017);
+            if($pey_type == 0) { //資源券
+                if($userInfo['watch'] >= $resourceInfo['watch_count']){
+                    $result             = BuyResourceController::mode($userInfo['user_id'], $type, $resource_id, $pey_type, $resourceInfo['watch_count']);
+                    if($result) {
+                        self::returnAjax(200);
+                    }else{
+                        self::returnAjax(301);
+                    }
+                }else{
+                    self::returnAjax(100018);
+                }
             }
 
-            if($pey_type == 1 && $userInfo['money'] >= $resourceInfo['money']) { //G
-
-
-            }else{
-                self::returnAjax(100017);
+            if($pey_type == 1) { //G
+                if($userInfo['money'] >= $resourceInfo['money']) {
+                    $result             = BuyResourceController::mode($userInfo['user_id'], $type, $resource_id, $pey_type, $resourceInfo['money']);
+                    if($result) {
+                        self::returnAjax(200);
+                    }else{
+                        self::returnAjax(301);
+                    }
+                }else{
+                    self::returnAjax(100017);
+                }
             }
 
         }else{

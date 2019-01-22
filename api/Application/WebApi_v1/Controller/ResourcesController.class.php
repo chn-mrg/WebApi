@@ -356,8 +356,8 @@ class ResourcesController extends UserBaseController
         if($resourceInfo) {
             //根據支付方式 判斷用戶餘額
             if($pey_type == 0) { //資源券
-                if($userInfo['watch'] >= $resourceInfo['watch_count']){
-                    $result             = BuyResourceController::mode($userInfo['user_id'], $type, $resource_id, $pey_type, $resourceInfo['watch_count']);
+                if($userInfo['watch'] >= 1){
+                    $result             = BuyResourceController::mode($userInfo['user_id'], $type, $resource_id, $pey_type, 1);
                     if($result) {
                         self::returnAjax(200);
                     }else{

@@ -48,7 +48,8 @@ class GroupmsgController extends UserBaseController
         $userInfo = self::getUserInfo();
         $text = I('text');
         $groupName = I('group');
-        if($userInfo && $text &&($groupName=="group" || $groupName=="live")){
+        $type = I('type');
+        if($userInfo && $text &&($groupName=="group" || $groupName=="live") && ($type=="text" || $type=="img" || $type="mp3")){
             $GatewayClient = new Gateway();
             $conf = self::GetSysConf("RegisterAddress");
             $GatewayClient::$registerAddress = $conf['value'];
@@ -59,6 +60,7 @@ class GroupmsgController extends UserBaseController
                 'head_portrait'=>self::ResourceUrl($userInfo['head_portrait'])."",
                 'level'=>$levelInfo['level']."",
                 'level_icon'=>$levelInfo['icon']."",
+                'type'=>$type,
                 'text' =>$text."",
                 'time'=>time()."",
             );

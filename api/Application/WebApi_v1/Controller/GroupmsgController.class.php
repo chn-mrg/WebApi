@@ -60,7 +60,7 @@ class GroupmsgController extends UserBaseController
                 'head_portrait'=>self::ResourceUrl($userInfo['head_portrait'])."",
                 'level'=>$levelInfo['level']."",
                 'level_icon'=>$levelInfo['icon']."",
-                'type'=>$type,
+                'type'=>$type."",
                 'text' =>$text."",
                 'time'=>time()."",
             );

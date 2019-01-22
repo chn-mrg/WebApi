@@ -39,12 +39,12 @@ class PublishController extends UserBaseController
             $video_url          = I('video_url'); //視頻地址
             $long               = I('long'); //視頻時長
             $urlRule            = C('urlRule');
-            if(!$video_img || !$video_url || !$long || strstr($urlRule['ResourceUrl'], $video_img) == false || strstr($urlRule['ResourceUrl'], $video_url) == false) {
+            if(!$video_img || !$video_url || !$long || strstr($video_img,$urlRule['ResourceUrl']) == false || strstr($video_url,$urlRule['ResourceUrl']) == false) {
                 self::returnAjax(100005);
             }
             //對文字長度判斷
             if($text) {
-                if(abslength($text) > 250) {
+                if(self::abslength($text) > 250) {
                     self::returnAjax(100014);
                 }
             }
@@ -61,19 +61,20 @@ class PublishController extends UserBaseController
         if($type == 2) {
             $text               = I('text'); //圖片文字
             $img_url            = I('img_url'); //圖片地址(數組)
-            if(empty($img_url)) {
+            //$img_url            = array("{#ResourceUrl$#}/Img/User_3/20190121/2019012121503675013675.png"); //圖片地址(數組)
+            if(!is_array($img_url) || count($img_url)<=0) {
                 self::returnAjax(100005);
             }
             $long               = count($img_url); //圖片數量
             $urlRule            = C('urlRule');
             foreach ($img_url as $k => $v) {
-                if(strstr($urlRule['ResourceUrl'], $v) == false) {
+                if(strstr($v,$urlRule['ResourceUrl']) == false) {
                     self::returnAjax(100005);
                 }
             }
             //對文字長度判斷
             if($text) {
-                if(abslength($text) > 250) {
+                if(self::abslength($text) > 250) {
                     self::returnAjax(100014);
                 }
             }
@@ -93,10 +94,9 @@ class PublishController extends UserBaseController
             }
 
             //對文字長度判斷
-            if(abslength($text) > 250) {
+            if(self::abslength($text) > 250) {
                 self::returnAjax(100014);
             }
-
             $object             = array(
                 'text'          => $text
             );
@@ -105,7 +105,7 @@ class PublishController extends UserBaseController
         //構建數據
         $data               = array(
             'user_id'       => $userInfo['user_id'],
-            'type'          => 3, //類型：1-視頻，2-圖片，3-文字
+            'type'          => $type, //類型：1-視頻，2-圖片，3-文字
             'time'          => time(),
             'like_count'    => 0,
             'object'        => json_encode($object),

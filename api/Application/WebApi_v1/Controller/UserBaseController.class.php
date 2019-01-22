@@ -315,7 +315,7 @@ class UserBaseController extends MainController
             die();
         }
 
-        $num                    = 3;
+        $num                    = 5;
 
         $where['a.type']        = $type;
         $where['a.resource_id'] = $resource_id;
@@ -329,7 +329,7 @@ class UserBaseController extends MainController
                                 ->field('a.comment_id,a.user_id,a.comment,a.push_time, b.user_id,b.nickname,b.head_portrait')
                                 ->join('LEFT JOIN sex_user_list b ON b.user_id = a.user_id')
                                 ->where($where)
-                                ->order('push_time')
+                                ->order('push_time DESC')
                                 ->page($page,$num)
                                 ->select();
         $commentInfoCount       = $commentM
@@ -355,16 +355,15 @@ class UserBaseController extends MainController
             //前三条一级回复
             $commentInfo[$k]['replyThree']          = $replyM
                                                     ->alias('a')
-                                                    ->field('a.reply_id,a.reply,a.user_id, b.user_id,b.nickname')
+                                                    ->field('a.reply_id,a.reply,a.user_id,a.parent_id,a.comment_id, b.user_id,b.nickname')
                                                     ->join('LEFT JOIN sex_user_list b ON b.user_id = a.user_id')
                                                     ->where(array('parent_id' => 0, 'a.comment_id' => $v['comment_id'],'a.state' => 1,'b.state' => 1))
                                                     ->limit(3)
-                                                    ->order('a.push_time DESC')
+                                                    ->order('a.push_time')
                                                     ->select();
             //该评论下的所有回复(多级)
             $commentInfo[$k]['replyCount']          = $replyM
                                                     ->alias('a')
-                                                    ->field('a.reply_id,a.reply,a.user_id, b.user_id,b.nickname')
                                                     ->join('LEFT JOIN sex_user_list b ON b.user_id = a.user_id')
                                                     ->where(array('a.comment_id' => $v['comment_id'],'a.state' => 1,'b.state' => 1))
                                                     ->count();
@@ -415,7 +414,7 @@ class UserBaseController extends MainController
         //该条评论下的所有审核通过回复
         $replyList                  = $replyM
                                     ->alias('a')
-                                    ->field('a.reply_id,a.parent_id,a.user_id,a.push_time,a.reply, b.nickname,b.head_portrait')
+                                    ->field('a.reply_id,a.parent_id,a.user_id,a.push_time,a.reply,a.parent_id, b.nickname,b.head_portrait')
                                     ->join('LEFT JOIN sex_user_list b ON b.user_id = a.user_id')
                                     ->where(array('a.comment_id'=>$comment_id,'a.state'=>1))
                                     ->order('push_time')
@@ -576,6 +575,57 @@ class UserBaseController extends MainController
         }
     }
 
+    /*
+     * 關鍵字過濾
+     * $str 字符串
+     */
+    /*protected function keyFilter($str) {
+
+        $keyword            = C('Keyword');
+        // 字符串转数组
+        $strArr             = explode('、',$str);
+
+        //去掉空格
+        foreach ($strArr as $k => $v) {
+
+        }
+
+    }*/
+
+    /*
+     * 判斷用戶是否已購買此資源
+     * type 資源類型
+     * resource_id 資源id
+     * user_id 用戶id
+     */
+    protected function watchAuth($user_id, $type, $resource_id) {
+
+        if(!$user_id || !$type || !$resource_id) {
+            return false;
+            die();
+        }
+
+        //查詢此用戶是否已購買此資源
+        $resourceM              = M('user_resource');
+        $resource               = $resourceM->where(array('user_id'=>$user_id,'type'=>$type,'resource_id'=>$resource_id))->find();
+        if($resource) {
+            //判斷類型   若爲資源券購買  需判斷是否過期
+            if($resource['pey_type'] == 0) {
+                if($resource['out_time'] < time()) { //已過期
+                    return false;
+                    die();
+                }else{
+                    return true;
+                    die();
+                }
+            }
+        }else{
+            return false; //未購買
+            die();
+        }
+
+    }
+
     /**
      * 计算两个时间戳之间的时间
      */
@@ -589,13 +639,13 @@ class UserBaseController extends MainController
         $dYear      = intval(date("Y",$cTime)) - intval(date("Y",$sTime));
 
         if($dTime == 0){
-            $dTime = '刚刚';
+            $dTime = '剛剛';
         }elseif( $dTime < 60){
             $dTime =  $dTime."秒前";
         }elseif( $dTime < 3600){
-            $dTime =  intval($dTime/60) . "分钟前";
+            $dTime =  intval($dTime/60) . "分鐘前";
         }elseif( $dTime >= 3600 && $dDay == 0  ){
-            $dTime =  intval($dTime/3600) . '小时前';
+            $dTime =  intval($dTime/3600) . '小時前';
         }elseif ($dDay > 0 && $dMonth == 0) {
             $dTime = $dDay . '天前';
         } elseif ($dMonth > 0 && $dYear == 0) {

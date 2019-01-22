@@ -269,13 +269,18 @@ class ResourcesController extends UserBaseController
             self::returnAjax(100005);
         }
 
-        $like_id             = CollectionToolController::collect($userInfo['user_id'],$type,$resource_id);
+        //驗證是否已收藏
+        $isLike             = M('notice_like')->where(array('user_id'=>$userInfo['user_id'],'type'=>$type,'resource_id'=>$resource_id))->find();
+        if($isLike) {
+            self::returnAjax(200);
+        }
+        $like_id            = CollectionToolController::collect($userInfo['user_id'],$type,$resource_id);
 
         if(!$like_id) {
             self::returnAjax(301);
         }
 
-        self::returnAjax(200,$like_id);
+        self::returnAjax(200);
     }
 
     /*
@@ -296,6 +301,12 @@ class ResourcesController extends UserBaseController
         $resource_id        = I('resource_id');
         if(!$type || !$resource_id) {
             self::returnAjax(100005);
+        }
+
+        //驗證是否已收藏
+        $isLike             = M('notice_like')->where(array('user_id'=>$userInfo['user_id'],'type'=>$type,'resource_id'=>$resource_id))->find();
+        if(!$isLike) {
+            self::returnAjax(200);
         }
 
         $result             = CollectionToolController::cancel($userInfo['user_id'],$type,$resource_id);

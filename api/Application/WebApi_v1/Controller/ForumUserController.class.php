@@ -198,6 +198,13 @@ class ForumUserController extends UserBaseController
             self::returnAjax(100005); //无效参数
         }
 
+        //判斷是否已關注
+        $isFans             = M('forum_fans')->where(array('fans_id'=>$fans_id))->find();
+
+        if(!$isFans) {
+            self::returnAjax(200);
+        }
+
         $result             = FansToolController::cancel($fans_id);
 
         if(!$result) {

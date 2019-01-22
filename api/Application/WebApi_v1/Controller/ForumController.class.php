@@ -157,6 +157,12 @@ class ForumController extends UserBaseController
             self::returnAjax(100005); //参数错误
         }
 
+        //判斷是否已關注
+        $isFans             = M('forum_fans')->where(array('user_id'=>$user_id,'touser_id'=>$touser_id))->find();
+
+        if($isFans) {
+            self::returnAjax(200);
+        }
         $result             = FansToolController::fans($user_id,$touser_id);
 
         if(!$result) {
@@ -182,6 +188,12 @@ class ForumController extends UserBaseController
         $dynamic_id             = I('dynamic_id'); //动态id
         if(!$dynamic_id) {
             self::returnAjax(100005); //无效参数
+        }
+
+        //驗證是否已點贊
+        $isLike                 = M('forum_like')->where(array('user_id'=>$userInfo['user_id'],'dynamic_id'=>$dynamic_id))->find();
+        if($isLike) {
+            self::returnAjax(200);
         }
 
         $result                 = LikeToolController::like($userInfo['user_id'], $dynamic_id);
@@ -211,6 +223,12 @@ class ForumController extends UserBaseController
 
         if(!$dynamic_id) {
             self::returnAjax(100005); //参数无效
+        }
+
+        //驗證是否已點贊
+        $isLike                 = M('forum_like')->where(array('user_id'=>$userInfo['user_id'],'dynamic_id'=>$dynamic_id))->find();
+        if(!$isLike) {
+            self::returnAjax(200);
         }
 
         $result             = LikeToolController::cancel($userInfo['user_id'],$dynamic_id);

@@ -131,11 +131,20 @@ class MovieController extends UserBaseController
             }else{
                 $movieInfo['isCollection'] = 0; //未收藏
             }
+            //是否有觀看權限
+            $auth                       = self::watchAuth($userInfo['user_id'], 1, $movieInfo['movie_id']);
+            if(!$auth) {
+                $movieInfo['auth']      = 0; //為購買
+            }else{
+                $movieInfo['auth']      = 1;
+            }
         }else{
             $movieInfo['isCollection']  = 0; //未收藏
             $movieInfo['user_id']       = null;
             $movieInfo['head_portrait'] = null;
         }
+
+        //用戶
 
 
         self::returnAjax(200, $movieInfo);

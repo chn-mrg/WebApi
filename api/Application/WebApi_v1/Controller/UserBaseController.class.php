@@ -618,6 +618,9 @@ class UserBaseController extends MainController
                     return true;
                     die();
                 }
+            }else{
+                return true;
+                die();
             }
         }else{
             return false; //未購買

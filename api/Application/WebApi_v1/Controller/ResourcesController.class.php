@@ -387,6 +387,19 @@ class ResourcesController extends UserBaseController
     }
 
     /*
+     * 獲取滾動文字
+     */
+    public function rollText() {
+        $key            = 'RollText';
+        $text           = self::GetSysConf($key);
+        if($text) {
+            self::returnAjax(200,$text);
+        }else{
+            self::returnAjax(301);
+        }
+    }
+
+    /*
      * 资源转发
      */
     public function forwarding() {

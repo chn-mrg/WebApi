@@ -486,6 +486,19 @@ class ForumController extends UserBaseController
         self::returnAjax(200);
     }
 
+    public function PlayForumVideo(){
+        $dynamicId = I('dynamic_id');
+        $dynamicM           = M('forum_dynamic');
+        $dynamicInfo = $dynamicM->where(array('dynamic_id'=>$dynamicId))->find();
+        if($dynamicInfo && $dynamicInfo['type'] == 1){
+            $object = (array)json_decode($dynamicInfo['object']);
+            $m3u8 = self::JsonToM3u8(self::ResourceUrl($object['video_url']));
+            header('Content-type: application/vnd.apple.mpegurl');
+            echo $m3u8;
+        }
+        self::returnAjax(404);
+    }
+
     /*
      * 社区动态分享
      */

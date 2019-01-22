@@ -107,6 +107,7 @@ class UserCenterController extends UserBaseController
         $page               = I('page')? I('page') : 1;
         $directNotice       = $noticeM
                             ->alias('a')
+                            ->field('a.notice_id,count(a.notice_id) as countNotice,a.content,a.time, b.head_portrait,b.user_id,b.experience,b.nickname')
                             ->join('LEFT JOIN sex_user_list b ON b.user_id = a.user_id')
                             ->where(array('a.type'=>0,'a.touser_id'=>$userInfo['user_id'],'a.state'=>0,'b.state'=>1))
                             ->order('time DESC')
@@ -123,7 +124,6 @@ class UserCenterController extends UserBaseController
         }
 
         foreach ($directNotice as $k => $v) {
-
             //发送私信用户头像
             $directNotice[$k]['head_portrait'] = self::ResourceUrl($v['head_portrait']);
             //发送私信用户等级

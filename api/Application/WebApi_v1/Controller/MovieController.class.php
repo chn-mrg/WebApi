@@ -144,8 +144,6 @@ class MovieController extends UserBaseController
             $movieInfo['head_portrait'] = null;
         }
 
-        //用戶
-
 
         self::returnAjax(200, $movieInfo);
     }

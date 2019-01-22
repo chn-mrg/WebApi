@@ -418,7 +418,7 @@ class UserBaseController extends MainController
                                     ->join('LEFT JOIN sex_user_list b ON b.user_id = a.user_id')
                                     ->where(array('a.comment_id'=>$comment_id,'a.state'=>1))
                                     ->order('push_time')
-                                    ->page($page,6)
+                                    ->page($page,8)
                                     ->select();
         $replyCount                 = $replyM
                                     ->alias('a')

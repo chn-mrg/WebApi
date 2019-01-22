@@ -198,11 +198,9 @@ class MovieController extends UserBaseController
         $json = self::GetRequest(self::ResourceUrl($movie_info['movie_url']));
         $request = (array)json_decode($json);
         $userInfo       = self::getUserInfo();
-        if($userInfo != null ){
-            $watchAuth      = self::watchAuth($userInfo['user_id'],1,$movie_id);
-            if($watchAuth) {
-                $m3u8 = self::ArrayToM3u8($request);
-            }
+        $watchAuth      = self::watchAuth($userInfo['user_id'],1,$movie_id);
+        if($watchAuth){
+            $m3u8 = self::ArrayToM3u8($request);
         }else{
             $newM3u8array = array(
                 'targetduration'=>$request['targetduration'],

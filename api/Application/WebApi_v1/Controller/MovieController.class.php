@@ -78,6 +78,9 @@ class MovieController extends UserBaseController
                 }else{
                     $movieList[$k]['isCollection'] = 0; //未收藏
                 }
+
+                //判斷用戶是否登錄
+
             }
             self::returnAjax(200,array('pages'=>array('count'=>$movieListCount,'num'=>$num),'list'=>$movieList));
         }else{

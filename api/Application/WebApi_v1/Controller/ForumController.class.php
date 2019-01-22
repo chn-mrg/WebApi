@@ -125,7 +125,7 @@ class ForumController extends UserBaseController
             //根据type类型 转换视频路径及图片路径
             if($v['type'] == 1) { //1 视频
                 //视频路径
-
+                $dynamic[$k]['object']['video_url']     = "/WebApi_v1/Forum/PlayForumVideo/dynamic_id/".$v['dynamic_id']."/index.m3u8";
                 $dynamic[$k]['object']['video_img']     = self::ResourceUrl($dynamic[$k]['object']['video_img']); //转换视频封面路径
                 $dynamic[$k]['object']['long']          = self::MinToTime($dynamic[$k]['object']['long']); //视频分钟转换为时分秒格式
             }
@@ -431,7 +431,7 @@ class ForumController extends UserBaseController
         //根据type类型 转换视频路径及图片路径
         if($dynamicInfo['type'] == 1) { //1 视频
             //视频路径
-
+            $dynamicInfo['object']['video_url']     = "/WebApi_v1/Forum/PlayForumVideo/dynamic_id/".$dynamicInfo['dynamic_id']."/index.m3u8";
             $dynamicInfo['object']['video_img']     = self::ResourceUrl($dynamicInfo['object']['video_img']); //转换视频封面路径
             $dynamicInfo['object']['long']          = self::MinToTime($dynamicInfo['object']['long']); //视频分钟转换为时分秒格式
         }

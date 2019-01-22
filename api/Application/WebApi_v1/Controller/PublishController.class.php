@@ -35,11 +35,11 @@ class PublishController extends UserBaseController
         //視頻動態
         if($type == 1) {
             $text               = I('text'); //視頻文字
-            $video_img          = I('video_img'); //視頻封面圖地址
+            //$video_img          = I('video_img'); //視頻封面圖地址
             $video_url          = I('video_url'); //視頻地址
-            $long               = I('long'); //視頻時長
+            //$long               = I('long'); //視頻時長
             $urlRule            = C('urlRule');
-            if(!$video_img || !$video_url || !$long || strstr($video_img,$urlRule['ResourceUrl']) == false || strstr($video_url,$urlRule['ResourceUrl']) == false) {
+            if(!$video_url || strstr($video_url,$urlRule['ResourceUrl']) == false) {
                 self::returnAjax(100005);
             }
             //對文字長度判斷
@@ -51,9 +51,7 @@ class PublishController extends UserBaseController
 
             $object             = array(
                 'text'          => $text,
-                'video_img'     => $video_img,
                 'video_url'     => $video_url,
-                'long'          => $long
             );
         }
 

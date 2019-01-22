@@ -414,7 +414,7 @@ class UserBaseController extends MainController
         //该条评论下的所有审核通过回复
         $replyList                  = $replyM
                                     ->alias('a')
-                                    ->field('a.reply_id,a.parent_id,a.user_id,a.push_time,a.reply,a.parent_id, b.nickname,b.head_portrait')
+                                    ->field('a.reply_id,a.parent_id,a.user_id,a.push_time,a.reply,a.parent_id,a.comment_id, b.nickname,b.head_portrait')
                                     ->join('LEFT JOIN sex_user_list b ON b.user_id = a.user_id')
                                     ->where(array('a.comment_id'=>$comment_id,'a.state'=>1))
                                     ->order('push_time')
@@ -579,7 +579,7 @@ class UserBaseController extends MainController
      * 關鍵字過濾
      * $str 字符串
      */
-    /*protected function keyFilter($str) {
+    protected function keyFilter($str) {
 
         $keyword            = C('Keyword');
         // 字符串转数组
@@ -590,7 +590,7 @@ class UserBaseController extends MainController
 
         }
 
-    }*/
+    }
 
     /*
      * 判斷用戶是否已購買此資源

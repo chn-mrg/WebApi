@@ -21,15 +21,12 @@ class FictionController extends UserBaseController
      */
     public function index() {
 
-        $sort               = I('sort')? I('sort') : 0; //0-综合排序(默认 0)：1、新上线 2、热播榜 3、好评
+        $sort               = I('sort')? I('sort') : 1; //1、新上线 2、热播榜 3、好评
         $category_id        = I('category_id');
         $label_id           = I('label_id');
         $num                = 9;
 
         switch ($sort) {
-            case 0:
-                $orderBy = 'rand()';
-                break;
             case 1: //新上线
                 $orderBy    = 'push_time DESC';
                 break;

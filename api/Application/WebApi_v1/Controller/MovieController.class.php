@@ -117,6 +117,8 @@ class MovieController extends UserBaseController
         //地址
         $movieInfo['movie_url']         = "/WebApi_v1/Movie/PlayVideo/movie_id/".$movieInfo['movie_id']."/index.m3u8";
         $movieInfo['movie_img']         = self::ResourceUrl($movieInfo['movie_img']);
+        $movieInfo['score']             = $movieInfo['score'] / 10;
+
         //判断该资源是否已被用户收藏
         $userInfo                       = self::getUserInfo();
         if($userInfo) {
@@ -139,6 +141,7 @@ class MovieController extends UserBaseController
             $movieInfo['isCollection']  = 0; //未收藏
             $movieInfo['user_id']       = null;
             $movieInfo['head_portrait'] = null;
+            $movieInfo['auth']          = 0; //為購買
         }
 
 

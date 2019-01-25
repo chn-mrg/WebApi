@@ -326,7 +326,9 @@ class UserCenterController extends UserBaseController
                             ->count();
             if($List) {
                 foreach ($List as $k => $v) {
-                    $List[$k]['image_url'] = self::ResourceUrl($v['image_url']); //封面图
+
+                    $image_url              = self::ResourceUrl($v['image_url']); //封面图
+                    $List[$k]['image_url']  = json_decode($image_url)[0]; //只显示第一张
                     //若为抵扣券购买，判断过期时间
                     if($v['pey_type'] == 0) {
                         $time   = self::timeDiff($v['out_time'], time());

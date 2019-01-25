@@ -50,6 +50,16 @@ class ForumUserController extends UserBaseController
             $userInfo['fansCount']          = $fansM->where(array('touser_id'=>$user_id))->count();//用户粉丝
             $userInfo['focusCount']         = $fansM->where(array('user_id'=>$user_id))->count();//用户粉丝
             //用户关注
+            if($user['user_id'] != $user_id) {
+                $isFans                     = self::userTouser($user['user_id'],$user_id);
+                if($isFans) {
+                    $userInfo['isFans']      = 1; //已关注
+                }else{
+                    $userInfo['isFans']      = 2; //未关注
+                }
+            }else{
+                $userInfo['isFans']          = 1; //已关注
+            }
 
         }else{
             self::returnAjax(404);
@@ -71,7 +81,7 @@ class ForumUserController extends UserBaseController
                     //根据type类型 转换视频路径及图片路径
                     if($v['type'] == 1) { //1 视频
                         //视频路径
-
+                        $dynamic[$k]['object']['video_url']     = "/WebApi_v1/Forum/PlayForumVideo/dynamic_id/".$v['dynamic_id']."/index.m3u8";
                         $dynamic[$k]['object']['video_img']     = self::ResourceUrl($dynamic[$k]['object']['video_img']); //转换视频封面路径
                         $dynamic[$k]['object']['long']          = self::MinToTime($dynamic[$k]['object']['long']); //视频分钟转换为时分秒格式
                     }
@@ -79,17 +89,23 @@ class ForumUserController extends UserBaseController
                     if($v['type'] == 2) { //图片
                         $dynamic[$k]['object']['img_url']       = self::ResourceUrl($dynamic[$k]['object']['img_url']);
                     }
+                    if($user) {
+                        $isLike                                 = self::isLike($user['user_id'], $v['dynamic_id']);
+                        if($isLike) {
+                            $dynamic[$k]['isLike']              = 1; //已點贊
+                        }else{
+                            $dynamic[$k]['isLike']              = 2; //未點贊
+                        }
+                    }else{
+                        $dynamic[$k]['isLike']                  = 2; //未點贊
+                    }
                 }
             }
             //是否显示删除按钮
-            if(!$user) {
-                $isBtn                   = 2; //不显示
+            if($user['user_id'] != $user_id) {
+                $isBtn               = 2; //不显示
             }else{
-                if($user['user_id'] != $user_id) {
-                    $isBtn               = 2; //不显示
-                }else{
-                    $isBtn               = 1; //显示
-                }
+                $isBtn               = 1; //显示
             }
 
             self::returnAjax(200, array('pages'=>array('count'=>$dynamicCount,'num'=>$num),'list'=>array('user'=>$userInfo,'dynamic'=>$dynamic,'btn'=>$isBtn,'fans'=>array(),'toFans'=>array())));
